@@ -169,7 +169,12 @@ html {
   font-size: var(--font-size-small);
 }
 
+
+
+
 /* Fim do BANNER  */
+
+
 
 /* inicio Carrocell responsivo*/
 
@@ -323,6 +328,7 @@ html {
 
 .description-button {
   display: flex;
+  text-decoration: none;
   font-family: var(--font-body);
   width: 150px;
   justify-content: center;
@@ -332,6 +338,24 @@ html {
   font-size: var(--font-size-small);
   border: none;
   margin: 0.4rem auto 2rem;
+  cursor: pointer;
+  transition: filter 0.2s;
+  color: var(--brown);
+  font-weight: 600;
+}
+
+.description-button2 {
+  display: flex;
+  text-decoration: none;
+  font-family: var(--font-body);
+  width: 150px;
+  justify-content: center;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  background: var(--button-light);
+  font-size: var(--font-size-small);
+  border: none;
+  margin: 5rem auto 0rem;
   cursor: pointer;
   transition: filter 0.2s;
   color: var(--brown);
