@@ -176,29 +176,39 @@ html {
 .cardist {
   height: 450px;
   width: 100%;
-  display: flex; /* Adicionando flex para centralizar conteúdo */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
+  display: flex;
+  /* Adicionando flex para centralizar conteúdo */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente */
   flex-direction: column;
 }
 
 .content0 {
   display: flex;
-  flex-direction: column; /* Alinha o conteúdo na vertical (se necessário) */
+  flex-direction: column;
+  /* Alinha o conteúdo na vertical (se necessário) */
 }
 
 .content1 {
-  height: 100%; /* Faz a altura ocupar toda a altura do cardist */
-  max-width: 635px; /* Define uma largura máxima para manter a estética */
-  width: 100%; /* Permite que o container se ajuste ao tamanho da tela */
+  height: 100%;
+  /* Faz a altura ocupar toda a altura do cardist */
+  max-width: 635px;
+  /* Define uma largura máxima para manter a estética */
+  width: 100%;
+  /* Permite que o container se ajuste ao tamanho da tela */
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para um efeito mais moderno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Adiciona sombra para um efeito mais moderno */
 }
 
 .navigation1 {
-  display: flex; /* Alinha os botões de navegação em linha */
-  justify-content: center; /* Centraliza os botões de navegação */
+  display: flex;
+  /* Alinha os botões de navegação em linha */
+  justify-content: center;
+  /* Centraliza os botões de navegação */
   background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
   border-radius: 1rem;
 }
@@ -222,16 +232,21 @@ html {
 }
 
 .slides {
-  background: red; /* Mantém a cor de fundo do carrossel */
+  background: red;
+  /* Mantém a cor de fundo do carrossel */
   margin: auto;
   display: flex;
-  width: 500%; /* Continua a largura total dos slides */
-  height: 100%; /* Faz o slide ocupar 100% da altura do content1 */
+  width: 500%;
+  /* Continua a largura total dos slides */
+  height: 100%;
+  /* Faz o slide ocupar 100% da altura do content1 */
 }
 
 .slide {
-  width: 20%; /* Cada slide ocupa 20% da largura total */
-  transition: 0.6s; /* Transição suave entre slides */
+  width: 20%;
+  /* Cada slide ocupa 20% da largura total */
+  transition: 0.6s;
+  /* Transição suave entre slides */
 }
 
 .slide img {
@@ -239,23 +254,23 @@ html {
   height: 100%;
 }
 
-#slide1:checked ~ .s1 {
+#slide1:checked~.s1 {
   margin-left: 0%;
 }
 
-#slide2:checked ~ .s1 {
+#slide2:checked~.s1 {
   margin-left: -20%;
 }
 
-#slide3:checked ~ .s1 {
+#slide3:checked~.s1 {
   margin-left: -40%;
 }
 
-#slide4:checked ~ .s1 {
+#slide4:checked~.s1 {
   margin-left: -60%;
 }
 
-#slide5:checked ~ .s1 {
+#slide5:checked~.s1 {
   margin-left: -80%;
 }
 
@@ -425,6 +440,7 @@ html {
 
 /* RESPONSIVE  */
 @media only screen and (max-width: 600px) {
+
   /* DESCRIPTIONS RESPONSIVE */
   .description-title,
   .description,
@@ -459,33 +475,7 @@ html {
 
   /* Fim do Logo responsivo*/
 
-  /* inicio Carrocell responsivo*/
 
-  .cardist {
-    margin: 0 0.5rem;
-    height: 250px;
-    width: 410px;
-  }
-
-  .content1 {
-    height: 250px;
-    width: 410px;
-    border-radius: 20px;
-    overflow: hidden;
-    /*  position: absolute;*/
-  }
-
-  .navigation1 {
-    margin: 0.1rem 0.1rem;
-    border-radius: 8px;
-    justify-items: center;
-    border: 40px;
-    position: absolute;
-    display: flex;
-    background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
-  }
-
-  /* fim do Carrocell responsivo*/
 
   /* Inicio do BANNER  */
   .banner {
@@ -572,6 +562,45 @@ html {
   }
 
   /* Fim do BANNER  */
+
+
+
+
+  /* inicio Carrocell responsivo*/
+
+  .cardist {
+    margin: 0 auto;
+    height: 250px;
+    width: 410px;
+    display: flex;
+    /* Adicionando flex para centralizar conteúdo */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    flex-direction: column;
+  }
+
+  .content1 {
+    height: 250px;
+    width: 410px;
+    border-radius: 20px;
+    overflow: hidden;
+    /*  position: absolute;*/
+  }
+
+  .navigation1 {
+    margin: 0.1rem 0.1rem;
+    border-radius: 8px;
+    justify-items: center;
+
+    display: flex;
+    background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
+  }
+
+  /* fim do Carrocell responsivo*/
+
+
 
   /* CARDS RESPONSIVE */
   .card {
@@ -682,35 +711,9 @@ html {
     margin: auto;
   }
 
-  /* inicio Carrocell responsivo*/
 
-  .cardist {
-    margin: 0rem 11rem;
-    height: 250px;
-    width: 410px;
-  }
 
-  .content1 {
-    height: 250px;
-    width: 410px;
-    border-radius: 20px;
-    overflow: hidden;
-    /*  position: absolute;*/
-  }
 
-  .navigation1 {
-    margin: 0.1rem 0.1rem;
-    border-radius: 8px;
-    justify-items: center;
-    border: 40px;
-    position: absolute;
-    display: flex;
-    background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
-  }
-
-  /* fim do Carrocell responsivo*/
-
-  /* MENU RESPONSIVE */
   .header {
     justify-content: space-between;
   }
@@ -815,4 +818,9 @@ html {
     width: 90%;
     margin: auto;
   }
+
+
+
+
+
 }
