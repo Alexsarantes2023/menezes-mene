@@ -593,8 +593,8 @@ html {
   /* inicio Carrocell responsivo*/
 
   .cardist {
-    margin: 0 auto;
-    height: 250px;
+    margin: 0 auto auto auto;
+    height: 260px;
     width: 410px;
     display: flex;
     /* Adicionando flex para centralizar conteúdo */
@@ -607,19 +607,29 @@ html {
 
   .content1 {
     height: 250px;
-    width: 410px;
+    width: 370px;
     border-radius: 20px;
     overflow: hidden;
     /*  position: absolute;*/
   }
 
   .navigation1 {
-    margin: 0.1rem 0.1rem;
+    margin: 0.2rem 0.2rem;
     border-radius: 8px;
     justify-items: center;
 
     display: flex;
     background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
+  }
+
+  .barx {
+    width: 62px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
   }
 
   /* fim do Carrocell responsivo*/
