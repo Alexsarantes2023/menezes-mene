@@ -519,12 +519,7 @@ html {
     background: #e4e2f5;
   }
 
-  .banner-content {
-    width: 95%;
-    padding: 6rem 0;
-    display: flex;
-    margin: auto;
-  }
+
 
   .banner-text {
     margin: 2rem;
@@ -560,22 +555,6 @@ html {
     filter: drop-shadow(4px 1px 1px var(--brown-gray));
   }
 
-  .banner-img {
-    width: 50%;
-    transform: rotateY(180deg);
-  }
-
-  .banner-image:hover {
-    width: 65%;
-    filter: drop-shadow(4px 2px 2px var(--brown-gray));
-    transition: all 0.2s ease;
-  }
-
-  .banner-image {
-    margin: auto auto;
-    width: 50%;
-    border-radius: 2rem;
-  }
 
   .banner-description {
     font-size: var(--font-size-small);
@@ -822,34 +801,72 @@ html {
 
 
 
-  /* BANNER RESPONSIVE */
+  /* BANNER RESPONSIVE .banner-img*/
   .contact-img,
-  .banner-img {
-    display: none;
-  }
+  {
+  display: none;
+}
 
-  .banner {
-    width: 100%;
-    display: flex;
-    border-radius: 0;
-  }
 
-  .banner-text {
-    width: 90%;
-    row-gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .banner-description {
-    text-align: center;
-  }
 
-  .banner-button {
-    text-align: center;
-  }
+.banner {
+  width: 100%;
+  display: flex;
+  border-radius: 0;
+}
+
+
+.banner-content {
+  width: 95%;
+  padding: 6rem 0;
+  display: flex;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /*background: #ff6e1d;*/
+}
+
+.banner-text {
+  width: 90%;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-description {
+  text-align: center;
+}
+
+.banner-button {
+  text-align: center;
+}
+
+
+.banner-img {
+  margin: 3rem auto;
+  width: 70%;
+  transform: rotateY(180deg);
+  align-self: center;
+
+}
+
+.banner-image:hover {
+  width: 250px;
+  filter: drop-shadow(4px 2px 2px var(--brown-gray));
+  transition: all 0.2s ease;
+
+}
+
+.banner-image {
+  margin: auto auto;
+  width: 200px;
+  border-radius: 2rem;
+  background: var(--orange);
+
+
 
   /* DESCRIPTIONS RESPONSIVE */
   .description-content {
