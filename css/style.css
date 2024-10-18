@@ -55,6 +55,9 @@ html {
   filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
+
+
+
 /* MENU */
 .navigation {
   width: 60%;
@@ -479,6 +482,11 @@ html {
     margin: auto;
   }
 
+
+
+
+
+
   /* Inicio do Logo responsivo*/
 
   .header {
@@ -495,6 +503,10 @@ html {
     text-decoration: none;
     color: var(--orange);
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
+  }
+
+  .logo span {
+    display: none;
   }
 
   /* Fim do Logo responsivo*/
@@ -593,7 +605,7 @@ html {
   /* inicio Carrocell responsivo*/
 
   .cardist {
-    margin: 0 auto auto auto;
+    margin: 0.6rem auto;
     height: 260px;
     width: 410px;
     display: flex;
@@ -614,10 +626,9 @@ html {
   }
 
   .navigation1 {
-    margin: 0.2rem 0.4rem;
+    margin: 0.2rem auto 0.4rem;
     border-radius: 8px;
     justify-items: center;
-
     display: flex;
     background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
   }
@@ -807,6 +818,9 @@ html {
     --font-size-medium: 1rem;
     --font-size-large: 4rem;
   }
+
+
+
 
   /* BANNER RESPONSIVE */
   .contact-img,
