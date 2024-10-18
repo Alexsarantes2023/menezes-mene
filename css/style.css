@@ -866,23 +866,23 @@ html {
   border-radius: 2rem;
   background: var(--orange);
 
+}
 
+/* DESCRIPTIONS RESPONSIVE */
+.description-content {
+  flex-direction: column;
+}
 
-  /* DESCRIPTIONS RESPONSIVE */
-  .description-content {
-    flex-direction: column;
-  }
+.description-card {
+  width: 90%;
+  max-width: 90%;
+}
 
-  .description-card {
-    width: 90%;
-    max-width: 90%;
-  }
-
-  /* CONTACT RESPONSIVE */
-  .contact-form {
-    width: 90%;
-    margin: auto;
-  }
+/* CONTACT RESPONSIVE */
+.contact-form {
+  width: 90%;
+  margin: auto;
+}
 
 
 
