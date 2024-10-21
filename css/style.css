@@ -28,15 +28,17 @@ html {
 }
 
 .header {
-  background: #ba67e7;
+
   width: 100%;
   display: flex;
   padding: 1.5rem 2.5rem;
   position: fixed;
   z-index: 1001;
+  background: #b12e7e;
 }
 
 .logo {
+
   font-family: var(--font-header);
   font-weight: 500;
   color: var(--brown);
@@ -459,16 +461,19 @@ html {
 }
 
 .footer {
-  background: linear-gradient(72deg, #3DEBB0 1%, #8956F3 99%);
+ 
 
 }
 
  Final do footer */
 
+
+/*Inicio do footerr */
+
 .footerr {
   display: flex;
   flex-direction: column;
-  background: #ba67e7;
+  background: #b12e7e;
 }
 
 .images-medias {
@@ -483,6 +488,7 @@ html {
   margin: 10px;
   width: 50px;
   height: 50px;
+  filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
 #media:hover {
@@ -498,6 +504,7 @@ html {
   font-size: var(--font-size-small);
   font-size-adjust: .3;
 }
+
 
 
 /* RESPONSIVE  */
@@ -525,16 +532,16 @@ html {
   /* Inicio do Logo responsivo*/
 
   .header {
-    background: #f1e6f7;
     width: 100%;
     display: flex;
     padding: 1.5rem 2.5rem;
     position: fixed;
     z-index: 1001;
+    background: #b12e7e;
   }
 
   .logo a {
-    font-size-adjust: 0.7;
+    font-size-adjust: 1;
     text-decoration: none;
     color: var(--orange);
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
