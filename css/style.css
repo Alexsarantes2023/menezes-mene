@@ -383,7 +383,7 @@ html {
 
 .contact-title {
   text-align: center;
-  margin: 0 0 3rem 0;
+
   padding: 2rem 0;
   font-size: var(--font-size-medium);
   color: var(--brown);
@@ -406,7 +406,7 @@ html {
   border-radius: 4rem;
   padding: 0 1rem;
   font-size: var(--font-size-medium);
-  height: 75px;
+  height: 60px;
   border: solid 3px var(--gray);
   width: 475px;
 }
@@ -486,8 +486,8 @@ html {
 }
 
 #media:hover {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   filter: drop-shadow(4px 2px 2px var(--brown-gray));
   transition: all 0.2s ease;
 }
