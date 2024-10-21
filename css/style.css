@@ -572,6 +572,7 @@ html {
   }
 
   .banner-subtitle {
+
     font-size: var(--font-size-medium);
     font-family: var(--font-header);
     color: #a525cc;
@@ -589,6 +590,8 @@ html {
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
   }
 
+
+
   .banner-title {
     text-align: center;
     font-size: var(--font-size-large);
@@ -600,8 +603,8 @@ html {
     filter: drop-shadow(4px 1px 1px var(--brown-gray));
   }
 
-
   .banner-description {
+
     font-size: var(--font-size-small);
     font-family: var(--font-body);
     padding: 0.7rem 0.5rem;
@@ -609,6 +612,8 @@ html {
     width: 85%;
     margin-bottom: 1.5rem;
   }
+
+
 
   .banner-button {
     width: 150px;
