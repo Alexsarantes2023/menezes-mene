@@ -347,9 +347,9 @@ html {
 
 /* Inicio Foto Grid */
 .cards {
-    margin: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
     width: 100%;
-
 }
 
 
@@ -496,9 +496,7 @@ html {
 /* DESCRIPTIONS */
 .descriptions {
     width: 100%;
-    margin-top: 0rem;
     /* background: hwb(60 86% 3%); */
-    padding: 0 0 1rem 0;
     /*background: rgb(250, 250, 249);*/
     background: linear-gradient(40deg, #2c17ec 12%, #f30ce0 80%);
 }
@@ -1011,7 +1009,7 @@ html {
 
     /* CARDS RESPONSIVE */
     .card {
-        width: 100;
+        width: 100%;
         height: 250px;
         min-width: 200px;
         border: 1px solid var(--primary);
