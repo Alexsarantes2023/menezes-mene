@@ -224,6 +224,7 @@ html {
     filter: blur(0);
     opacity: 1;
     filter: drop-shadow(4px 1px 1px var(--brown-gray));
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87
 }
 
 .banner-subtitle {
