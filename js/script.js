@@ -56,3 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
   audio.play();
 });
 
+// Define o volume do áudio para 30%
+var audio = document.getElementById('musica');
+var audio2 = document.getElementById('musica2');
+var audio3 = document.getElementById('musica3');
+var audio4 = document.getElementById('musica4');
+audio.volume = 0.3;
+audio2.volume = 0.3;
+audio3.volume = 0.3;
+audio4.volume = 0.3;

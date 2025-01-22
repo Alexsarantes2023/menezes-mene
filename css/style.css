@@ -281,12 +281,59 @@ html {
 .banner-image:hover {
     width: 60%;
     filter: drop-shadow(4px 2px 2px var(--brown-gray));
-    transition: all 2s ease;
-    transform: rotateY(180deg);
 
+    transform: rotateY(180deg);
+    transition: all 2s ease;
 }
 
 
+
+
+.banner-description {
+    font-size: var(--font-size-medium);
+    font-family: var(--font-body);
+    padding: 0 0.3rem;
+    color: #582966;
+    width: 85%;
+    padding-bottom: 10px;
+    margin-bottom: 1.5rem;
+
+    left: 0;
+    animation: effectNextDescription 3.5s linear 1 forwards;
+    z-index: 2;
+    filter: blur(0);
+    opacity: 1;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
+}
+
+.banner-button {
+
+    width: 150px;
+    background: var(--orange);
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-family: var(--font-body);
+    color: var(--white);
+    font-weight: 600;
+    font-size: var(--font-size-small);
+}
+
+
+.banner-button2 {
+    width: 150px;
+    background: #32CD32;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    font-family: var(--font-body);
+    color: var(--white);
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    text-align: center;
+
+}
 
 @keyframes effectNextThumb {
     from {
@@ -346,52 +393,6 @@ html {
         opacity: 0;
 
     }
-}
-
-.banner-description {
-    font-size: var(--font-size-medium);
-    font-family: var(--font-body);
-    padding: 0 0.3rem;
-    color: #582966;
-    width: 85%;
-    padding-bottom: 10px;
-    margin-bottom: 1.5rem;
-
-    left: 0;
-    animation: effectNextDescription 3.5s linear 1 forwards;
-    z-index: 2;
-    filter: blur(0);
-    opacity: 1;
-    filter: drop-shadow(2px 1px 1px var(--brown-gray));
-}
-
-.banner-button {
-
-    width: 150px;
-    background: var(--orange);
-    padding: 0.7rem 2rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-family: var(--font-body);
-    color: var(--white);
-    font-weight: 600;
-    font-size: var(--font-size-small);
-}
-
-
-.banner-button2 {
-    width: 150px;
-    background: #32CD32;
-    padding: 0.7rem 2rem;
-    border-radius: 2rem;
-    margin: 1rem;
-    text-decoration: none;
-    font-family: var(--font-body);
-    color: var(--white);
-    font-weight: 600;
-    font-size: var(--font-size-small);
-    text-align: center;
-
 }
 
 /* Fim do BANNER  */
@@ -1090,7 +1091,7 @@ html {
     .banner-title {
         text-align: center;
         font-size: var(--font-size-large);
-        font-family: var(--font-header);
+        /*font-family: var(--font-header);*/
         color: #582966;
         line-height: 100%;
         text-transform: uppercase;
