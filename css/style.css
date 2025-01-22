@@ -137,14 +137,93 @@ html {
 }
 
 .banner-title {
+
+    /*font-family: "Playwrite IN", serif;
+
+
+
+  font-optical-sizing: auto;
+    font-weight: <weight>;
+    
+    font-family: "Playwrite IN", serif;
+    font-style: normal;
+
+
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+
+    font-family: "Playwrite IN", serif;
+     /*font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+
+     font-family: "Playwrite IN", serif;
+   font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+ font-family: "Playwrite IN", serif;
+
+
+
+    font-family: var(--font-header);*/
     font-size: var(--font-size-large);
-    font-family: var(--font-header);
+
     color: #582966;
     line-height: 118%;
     text-transform: uppercase;
     font-weight: 900;
-    filter: drop-shadow(4px 1px 1px var(--brown-gray));
 
+
+    left: 0;
+    animation: effectNextTitle 3s linear 1 forwards;
+    z-index: 2;
+    filter: blur(0);
+    opacity: 1;
+    filter: drop-shadow(4px 1px 1px var(--brown-gray));
 }
 
 .banner-subtitle {
@@ -154,6 +233,13 @@ html {
     line-height: 1rem;
     font-size-adjust: 1;
     padding-top: 40px;
+
+
+    left: 0;
+    animation: effectNextSubtitle 3s linear 1 forwards;
+    z-index: 2;
+    filter: blur(0);
+    opacity: 1;
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
@@ -163,6 +249,13 @@ html {
     color: #a525cc;
     line-height: 3rem;
     font-size-adjust: 1;
+
+
+    left: 0;
+    animation: effectNextSubtitle2 3.5s linear 1 forwards;
+    z-index: 2;
+    filter: blur(0);
+    opacity: 1;
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
@@ -170,29 +263,106 @@ html {
     width: 50%;
     display: flex;
     transform: rotateY(180deg);
-}
 
-.banner-image:hover {
-    width: 65%;
-    filter: drop-shadow(4px 2px 2px var(--brown-gray));
-    transition: all 0.2s ease;
 }
 
 .banner-image {
     margin: auto auto;
     width: 50%;
     border-radius: 2rem;
+    right: 0;
+    animation: effectNextThumb 2.5s linear 1 forwards;
+    z-index: 2;
+    filter: blur(0);
+    opacity: 1;
 
 }
 
+.banner-image:hover {
+    width: 60%;
+    filter: drop-shadow(4px 2px 2px var(--brown-gray));
+    transition: all 2s ease;
+    transform: rotateY(180deg);
+
+}
+
+
+
+@keyframes effectNextThumb {
+    from {
+        margin: auto auto;
+        width: 50%;
+        border-radius: 2rem;
+        transform: translateX(-800px);
+        filter: blur(20px);
+        opacity: 0;
+
+    }
+}
+
+@keyframes effectNextTitle {
+    from {
+        margin: auto auto;
+        width: 50%;
+        border-radius: 2rem;
+        transform: translateX(-800px);
+        filter: blur(20px);
+        opacity: 0;
+
+    }
+}
+
+@keyframes effectNextSubtitle {
+    from {
+        margin: auto auto;
+        width: 50%;
+        border-radius: 2rem;
+        transform: translateY(-800px);
+        filter: blur(20px);
+        opacity: 0;
+
+    }
+}
+
+@keyframes effectNextSubtitle2 {
+    from {
+        margin: auto auto;
+        width: 50%;
+        border-radius: 2rem;
+        transform: translateY(-800px);
+        filter: blur(20px);
+        opacity: 0;
+
+    }
+}
+
+@keyframes effectNextDescription {
+    from {
+        margin: auto auto;
+        width: 50%;
+        border-radius: 2rem;
+        transform: translateY(400px);
+        filter: blur(20px);
+        opacity: 0;
+
+    }
+}
+
 .banner-description {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-medium);
     font-family: var(--font-body);
     padding: 0 0.3rem;
     color: #582966;
     width: 85%;
     padding-bottom: 10px;
     margin-bottom: 1.5rem;
+
+    left: 0;
+    animation: effectNextDescription 3.5s linear 1 forwards;
+    z-index: 2;
+    filter: blur(0);
+    opacity: 1;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
 .banner-button {
