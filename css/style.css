@@ -137,86 +137,13 @@ html {
 }
 
 .banner-title {
-
-    /*font-family: "Playwrite IN", serif;
-
-
-
-  font-optical-sizing: auto;
-    font-weight: <weight>;
-    
-    font-family: "Playwrite IN", serif;
-    font-style: normal;
-
-
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-    font-family: "Playwrite IN", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-
-    font-family: "Playwrite IN", serif;
-     /*font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
-
-     font-family: "Playwrite IN", serif;
-   font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-
- font-family: "Playwrite IN", serif;
-
-
-
-    font-family: var(--font-header);*/
-    font-size: var(--font-size-large);
-
+    font-family: "Permanent Marker", serif;
+    /* font-family: var(--font-header);*/
+    font-size: 5rem;
     color: #582966;
     line-height: 118%;
     text-transform: uppercase;
     font-weight: 900;
-
 
     left: 0;
     animation: effectNextTitle 3s linear 1 forwards;
@@ -296,6 +223,7 @@ html {
     padding: 0 0.3rem;
     color: #582966;
     width: 85%;
+    Margin-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 1.5rem;
 
@@ -841,13 +769,6 @@ html {
 }
 
 
-/*Inicio do footerr */
-
-.footerr {
-    display: flex;
-    flex-direction: column;
-    background: #b12e7e;
-}
 
 .images-medias {
     display: flex;
@@ -870,14 +791,7 @@ html {
     transition: all 0.1s ease;
 }
 
-.copy-right_text {
-    color: var(--gray);
-    text-align: center;
-    font-size: var(--font-size-small);
-    font-size-adjust: .3;
-}
 
-/* Final do footer */
 
 .buttonss {
     display: flex;
@@ -960,8 +874,82 @@ html {
     margin-bottom: 2rem;
 }
 
+/*Inicio do footerr */
+
+.footerr {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #b12e7e;
+}
+
+.footer-contacto-pai {
+    width: 100vw;
+    display: flex;
+    Margin-top: 1rem;
+    align-items: center;
+    font-family: var(--font-header);
+    filter: drop-shadow(2px 1px 1px var(--orange));
+}
+
+.footer-contacto {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-image {
+    margin: 0.8rem;
+    border-radius: 50%;
+    filter: drop-shadow(2px 1px 1px var(--orange));
+}
+
+.footer-icons {
+    margin: 1rem auto 0 auto;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
 
+
+.icons-list {
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.icons-links {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.icons-links:hover {
+    color: #ff0202;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* .copy-right_text {
+    color: var(--gray);
+    text-align: center;
+    font-size: var(--font-size-small);
+    font-size-adjust: .3;
+}
+
+Final do footer */
 /* RESPONSIVE  */
 @media only screen and (max-width: 600px) {
 
