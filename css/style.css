@@ -1088,9 +1088,12 @@ Final do footer */
         filter: drop-shadow(4px 1px 1px var(--brown-gray));
     }
 
-    .banner-description {
 
+
+    .banner-description {
         font-size: var(--font-size-small);
+        font-size: var(--font-size-medium);
+
         font-family: var(--font-body);
         padding: 0.7rem 0.5rem;
         color: #582966;
