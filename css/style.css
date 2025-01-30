@@ -676,7 +676,7 @@ html {
     background: var(--button-light);
     font-size: var(--font-size-small);
     border: none;
-    margin: 2.5rem auto 0;
+    margin: 2.5rem auto 2rem;
     cursor: pointer;
     transition: filter 0.2s;
     color: var(--brown);
