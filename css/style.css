@@ -448,7 +448,7 @@ html {
 
 /* Inicio Foto Grid */
 .cards {
-    margin: 3rem 0;
+
     width: 100%;
 
 }
@@ -595,7 +595,9 @@ html {
 
 /* DESCRIPTIONS */
 .descriptions {
-    width: 100%;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 2rem;
     /* background: hwb(60 86% 3%); */
     /*background: rgb(250, 250, 249);*/
     background: linear-gradient(40deg, #2c17ec 12%, #f30ce0 80%);
@@ -603,7 +605,7 @@ html {
 
 .descriptions-title {
     text-align: center;
-    margin: 2rem;
+
     padding: 2rem;
     font-size: 1.7rem;
     color: var(--brown);
@@ -674,7 +676,7 @@ html {
     background: var(--button-light);
     font-size: var(--font-size-small);
     border: none;
-    margin: 2.5rem auto;
+    margin: 2.5rem auto 0;
     cursor: pointer;
     transition: filter 0.2s;
     color: var(--brown);
@@ -1566,6 +1568,7 @@ Final do footer */
 
     .banner-description {
         text-align: center;
+
     }
 
     .banner-button {
@@ -1594,6 +1597,11 @@ Final do footer */
     /* DESCRIPTIONS RESPONSIVE */
     .description-content {
         flex-direction: column;
+    }
+
+    .description-title {
+        color: var(--brown);
+        font-size: var(--font-size-medium);
     }
 
     .description-card {
