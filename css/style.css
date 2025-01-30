@@ -43,6 +43,7 @@ html {
 
 .logo-img {
     display: flex;
+    filter: drop-shadow(2px 2px 2px black);
 }
 
 .logo {
@@ -53,6 +54,7 @@ html {
     font-family: var(--font-header);
     font-weight: 700;
     margin-top: 0;
+    margin-left: 0.5rem;
     color: var(--brown);
     cursor: pointer;
 }
@@ -64,7 +66,6 @@ html {
     padding: 3px;
     text-decoration: none;
     color: var(--orange);
-
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
@@ -74,8 +75,8 @@ html {
     padding: 2px;
     font-size-adjust: 1;
     color: #a525cc;
-    filter: drop-shadow(2px 1px 1px var(--brown-gray));
 
+    filter: drop-shadow(2px 2px 2px black);
 }
 
 .logox {
@@ -447,9 +448,9 @@ html {
 
 /* Inicio Foto Grid */
 .cards {
-    margin-top: 3rem;
-    margin-bottom: 0;
+    margin: 3rem 0;
     width: 100%;
+
 }
 
 
@@ -588,7 +589,6 @@ html {
 }
 
 /* Final Foto Grid */
-
 
 
 
@@ -951,6 +951,80 @@ html {
 
 Final do footer */
 /* RESPONSIVE  */
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navigation {
+        display: none;
+    }
+
+    .banner-text1 {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .banner-subtitle {
+        font-size: 1.2rem;
+
+    }
+
+    .banner-subtitle2 {
+        font-size: 1.2rem;
+
+    }
+
+
+    .card-content {
+        justify-content: center;
+        margin: auto;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+
+    .navigation {
+        display: none;
+    }
+
+
+    #nav-items {
+        position: fixed;
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        right: 0px;
+        align-items: center;
+        padding: 40px 17px;
+        flex-direction: column;
+        justify-content: start;
+        z-index: 1000;
+        top: 77px;
+        background: var(--primary);
+    }
+
+    .navigation.active {
+        display: block;
+    }
+
+    .bars.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .bars.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bars.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+
 @media only screen and (max-width: 600px) {
 
     /* DESCRIPTIONS RESPONSIVE */
@@ -991,27 +1065,25 @@ Final do footer */
         font-weight: 700;
         color: var(--brown);
         cursor: pointer;
+
     }
 
     .logo a {
-
         width: 15rem;
         height: 1.5rem;
         font-size-adjust: .80;
-        padding: 0 0;
+        padding: 0 0.2rem;
         text-decoration: none;
         color: var(--orange);
-        filter: drop-shadow(2px 1px 1px var(--brown-gray));
+        filter: drop-shadow(2px 2px 2px black);
     }
-
-
 
     .logo span {
         width: 15rem;
+        padding-left: 0.1rem;
         font-size-adjust: .80;
         color: #a525cc;
-        filter: drop-shadow(2px 1px 1px var(--brown-gray));
-
+        filter: drop-shadow(2px 2px 2px black);
     }
 
     .logox {
@@ -1121,6 +1193,8 @@ Final do footer */
         font-size: var(--font-size-small);
     }
 
+
+
     /* Fim do BANNER  */
 
 
@@ -1171,13 +1245,149 @@ Final do footer */
 
 
     /* CARDS RESPONSIVE */
-    .card {
+    /* Inicio Foto Grid */
+    .cards {
+        margin: 3rem 0;
         width: 100%;
-        height: 250px;
-        min-width: 200px;
-        border: 1px solid var(--primary);
+
     }
 
+
+
+    .card-content {
+        width: 100%;
+        display: flex;
+        margin: 0.5rem 4rem;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding: 0.3rem 0;
+        flex-wrap: wrap;
+    }
+
+
+
+
+    .card {
+        width: 100%;
+        height: 500px;
+        min-width: 400px;
+        /* border: 1px solid var(--primary)
+        ;*/
+
+        margin: 1rem 0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        filter: drop-shadow(2px 1px 1px var(--brown-gray));
+    }
+
+    #card0 {
+        background: url("../img2/cd0.webp") center center no-repeat;
+        background-size: 400px;
+        border-radius: 8px;
+    }
+
+    #card1 {
+        background: url("../img2/cd1.webp") center center no-repeat;
+        background-size: 400px;
+    }
+
+    #card2 {
+        background: url("../img2/cd2.webp") center center no-repeat;
+        background-size: 400px;
+    }
+
+    #card3 {
+        background: url("../img2/cd3.webp") center center no-repeat;
+        background-size: 400px;
+    }
+
+    #card4 {
+        background: url("../img2/cd4.webp") center center no-repeat;
+        background-size: 400px;
+
+    }
+
+    #card5 {
+        background: url("../img2/cd5.webp") center center no-repeat;
+        background-size: 500px;
+
+    }
+
+    #card6 {
+        background: url("../img2/cd6.webp") center center no-repeat;
+        background-size: 500px;
+    }
+
+    #card7 {
+        background: url("../img2/cd7.webp") center center no-repeat;
+        background-size: 500px;
+
+    }
+
+    #card8 {
+        background: url("../img2/cd8.webp") center center no-repeat;
+        background-size: 500px;
+    }
+
+    #card9 {
+        background: url("../img2/cd9.webp") center center no-repeat;
+        background-size: 400px;
+    }
+
+    #card10 {
+        background: url("../img2/cd10.webp") center center no-repeat;
+        background-size: 500px;
+    }
+
+    #card11 {
+        background: url("../img2/cd11.webp") center center no-repeat;
+        background-size: 500px;
+    }
+
+    .card-button {
+        display: flex;
+        font-family: var(--font-body);
+        width: 150px;
+        justify-content: center;
+        padding: 0.7rem;
+        border-radius: 2rem;
+        background: var(--button-light);
+        font-size: var(--font-size-small);
+        color: var(--brown);
+        font-weight: 500;
+        border: none;
+        margin: 0.4rem auto 2rem;
+        cursor: pointer;
+        transition: filter 0.2s;
+    }
+
+    .card-button:hover {
+        filter: brightness(0.9);
+    }
+
+    #card0:hover,
+    #card1:hover,
+    #card2:hover,
+    #card3:hover,
+    #card4:hover,
+    #card5:hover,
+    #card6:hover,
+    #card7:hover,
+    #card8:hover,
+    #card9:hover,
+    #card10:hover,
+    #card11:hover {
+        background-size: 500px;
+    }
+
+
+
+    .arrow {
+        display: none;
+    }
+
+    /* Final Foto Grid */
     .card-content {
         flex-wrap: nowrap;
         overflow-x: scroll;
@@ -1204,8 +1414,8 @@ Final do footer */
         background: var(--brown);
         background: #7446f3;
         border: 1px solid var(--button-light);
-        border-radius: 20px;
-    }*/
+        border-radius: 20px;*/
+
 
 
 
@@ -1216,6 +1426,7 @@ Final do footer */
         justify-content: center;
         align-items: center;
         gap: 100px;
+
     }
 
     .btn-arrow {
@@ -1224,6 +1435,7 @@ Final do footer */
         cursor: pointer;
         border-radius: 50px;
     }
+
 
     .bx {
         font-size: 1.6rem;
@@ -1254,77 +1466,6 @@ Final do footer */
         border-radius: 3px;
         margin: 5px auto;
     }
-
-    #nav-items {
-        position: fixed;
-        display: flex;
-        height: 100vh;
-        width: 100%;
-        right: 0px;
-        align-items: center;
-        padding: 40px 17px;
-        flex-direction: column;
-        justify-content: start;
-        z-index: 1000;
-        top: 77px;
-        background: var(--primary);
-    }
-
-    .navigation.active {
-        display: block;
-    }
-
-    .bars.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .bars.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .bars.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .navigation {
-        display: none;
-    }
-
-    .banner-text1 {
-        width: 600px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .banner-subtitle {
-        font-size: 1.2rem;
-
-    }
-
-    .banner-subtitle2 {
-        font-size: 1.2rem;
-
-    }
-
-
-    .card-content {
-        justify-content: center;
-        margin: auto;
-    }
-
-    .header {
-        justify-content: space-between;
-    }
-
-
-    .navigation {
-        display: none;
-    }
-
 
     #nav-items {
         position: fixed;
@@ -1399,6 +1540,19 @@ Final do footer */
         flex-direction: column;
     }
 
+    .banner-title {
+        text-align: center;
+        font-size: var(--font-size-large);
+        /*font-family: var(--font-header);*/
+        color: #582966;
+
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+    }
+
     .banner-text {
         width: 80%;
         row-gap: 1rem;
@@ -1407,6 +1561,8 @@ Final do footer */
         display: flex;
         flex-direction: column;
     }
+
+
 
     .banner-description {
         text-align: center;
@@ -1418,12 +1574,12 @@ Final do footer */
 
 
     .banner-img {
-        margin: 3rem auto;
+        margin: 1rem auto 2;
         width: 100%;
     }
 
     .banner-image:hover {
-        width: 250px;
+        width: 220px;
         filter: drop-shadow(4px 2px 2px var(--brown-gray));
         transition: all 0.2s ease;
     }
