@@ -889,7 +889,7 @@ html {
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
-    opacity: 0.9;
+    
 }
 
 .enzo {
@@ -982,7 +982,9 @@ Final do footer */
     .pipeline {
         display: none;
     }
-
+    .nav-item:hover {
+        color: var(--brown);
+    }
     .banner-text1 {
         width: 600px;
         display: flex;
@@ -1138,7 +1140,8 @@ Final do footer */
 
      Fim do Logo responsivo*/
 
-
+ 
+    
 
     /* Inicio do BANNER  */
 
@@ -1489,6 +1492,10 @@ Final do footer */
 
     }
 
+
+
+    
+
     /* MENU RESPONSIVE */
     .header {
         justify-content: space-between;
@@ -1528,6 +1535,10 @@ Final do footer */
         transition: all 1s ease;
     }
 
+    .nav-item:hover {
+        color: var(--brown);
+    }
+
     .navigation.active {
         display: block;
     }
@@ -1550,7 +1561,7 @@ Final do footer */
 @media only screen and (max-width: 1024px) {
     :root {
         --font-size-small: 0.8rem;
-        --font-size-medium: 1rem;
+        --font-size-medium: 1rem;/**/
         --font-size-large: 4rem;
     }
 
