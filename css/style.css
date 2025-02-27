@@ -36,7 +36,7 @@ html {
     padding: 1.2rem 1.5rem;
     position: fixed;
     z-index: 1001;
-    background: #b12e7e;
+    background: rgb(177, 46, 126, 0.8);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 1px 4px;
 
 }
@@ -95,7 +95,7 @@ html {
     display: flex;
     margin-top: 10px;
     justify-content: end;
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
 .navigation ul li {
@@ -107,20 +107,29 @@ html {
     font-size-adjust: 0.8;
     font-family: var(--font-header);
     text-decoration: none;
-    color: var(--brown);
+    color: var(--orange);
     font-weight: 500;
 }
-
+.pipeline {
+    color:#e4d93e;
+}
 .nav-item:hover {
-    color: var(--orange);
+    color: var(--white);
 }
 
 /* Inicio do BANNER  */
 
 .banner {
     width: 100%;
-    /*background: #e4e2f5;*/
-    background: linear-gradient(72deg, #3debb0 3%, #4e13ce 99%);
+    /*background: #e4e2f5;
+    background: linear-gradient(72deg, #135f46 1%, #4e13ce 99%);*/
+
+    
+    /*background: linear-gradient(72deg, #3debb0 3%, #4e13ce 99%);*/
+   /* background: -webkit-radial-gradient(circle, #3debb0, #4e13ce);  Safari 5.1 - 6.0 */
+    /*background: -o-radial-gradient(circle, #3debb0, #4e13ce);  Opera 11.1 - 12.0 */
+   /* background: -moz-radial-gradient(circle, #3debb0, #4e13ce); /* Firefox 3.6 - 15 */
+    background: radial-gradient(circle, #420eb4,#30c594 );
     /*  background-color: rgba(255, 255, 255, 0.5);
     Fundo branco com 50% de transparência */
 }
@@ -152,40 +161,41 @@ html {
     filter: blur(0);
     opacity: 1;
     filter: drop-shadow(4px 1px 1px var(--brown-gray));
-    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
 }
 
 .banner-subtitle {
     font-size: var(--font-size-medium);
     font-family: var(--font-header);
-    color: #a525cc;
+    color: #491e57;
     line-height: 1rem;
     font-size-adjust: 1;
     padding-top: 40px;
-
+   
 
     left: 0;
     animation: effectNextSubtitle 3s linear 1 forwards;
     z-index: 2;
     filter: blur(0);
     opacity: 1;
-    filter: drop-shadow(2px 1px 1px var(--brown-gray));
+    filter: drop-shadow(4px 1px 1px var(--brown-gray));
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
 }
 
 .banner-subtitle2 {
     font-size: var(--font-size-medium);
     font-family: var(--font-header);
-    color: #a525cc;
+    color: #491e57;
     line-height: 3rem;
     font-size-adjust: 1;
-
 
     left: 0;
     animation: effectNextSubtitle2 3.5s linear 1 forwards;
     z-index: 2;
     filter: blur(0);
     opacity: 1;
-    filter: drop-shadow(2px 1px 1px var(--brown-gray));
+    filter: drop-shadow(4px 1px 1px var(--brown-gray));
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
 }
 
 .banner-img {
@@ -210,7 +220,6 @@ html {
 .banner-image:hover {
     width: 60%;
     filter: drop-shadow(4px 2px 2px var(--brown-gray));
-
     transform: rotateY(180deg);
     transition: all 2s ease;
 }
@@ -222,7 +231,7 @@ html {
     font-size: var(--font-size-medium);
     font-family: var(--font-body);
     padding: 0 0.3rem;
-    color: #582966;
+    color: #250730;
     width: 85%;
     Margin-top: 10px;
     padding-bottom: 10px;
@@ -233,7 +242,8 @@ html {
     z-index: 2;
     filter: blur(0);
     opacity: 1;
-    filter: drop-shadow(2px 1px 1px var(--brown-gray));
+    filter: drop-shadow(4px 1px 1px var(--brown-gray));
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
 }
 
 .banner-button {
@@ -335,7 +345,7 @@ html {
 /* inicio Carrocell responsivo*/
 
 .gmedias {
-    background: linear-gradient(72deg, #3debb0 3%, #4e13ce 99%);
+    background: radial-gradient(circle, #420eb4,#30c594 );
 }
 
 .cardist {
@@ -376,7 +386,7 @@ html {
     /* Alinha os botões de navegação em linha */
     justify-content: center;
     /* Centraliza os botões de navegação */
-    background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
+    background: radial-gradient(72deg, #3debb0 1%, #8956f3 99%);
     border-radius: 1rem;
 }
 
@@ -600,7 +610,7 @@ html {
     padding-bottom: 2rem;
     /* background: hwb(60 86% 3%); */
     /*background: rgb(250, 250, 249);*/
-    background: linear-gradient(40deg, #2c17ec 12%, #f30ce0 80%);
+    background: #fff;
 }
 
 .descriptions-title {
@@ -628,7 +638,7 @@ html {
     width: calc(40% - 20px);
     max-width: 40%;
     padding: 2.5rem 2rem;
-    background: #fff;
+    background: #f0ecec;
     font-family: var(--font-body);
     border-radius: 2rem;
     display: flex;
@@ -691,8 +701,15 @@ html {
 .contact {
     width: 100%;
     background: var(--white);
+    
 }
-
+.border-top {
+    width:90%;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    border-top: 2px solid rgb(0,0,0, 0.3);
+}
 .contact-content {
     width: 90%;
     margin: auto;
@@ -701,7 +718,7 @@ html {
 
 .contact-title {
     text-align: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
     font-size: var(--font-size-medium);
     color: var(--brown);
     font-weight: 600;
@@ -867,7 +884,12 @@ html {
     flex-direction: row;
     gap: 3rem;
     flex-wrap: wrap;
-    background: linear-gradient(40deg, #d415b4 12%, #fcc7f0 80%);
+    
+    background-image: url('../img4/photo-1403.webp');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    opacity: 0.9;
 }
 
 .enzo {
@@ -938,7 +960,7 @@ html {
 }
 
 .copyright {
-    font-size: 11px;
+    font-size: 8px;
     color: #fff;
     text-align: center;
     padding: 14px 0;
@@ -955,7 +977,9 @@ Final do footer */
 /* RESPONSIVE  */
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .navigation {
+    
+    .navigation,
+    .pipeline {
         display: none;
     }
 
@@ -969,12 +993,16 @@ Final do footer */
 
     .banner-subtitle {
         font-size: 1.2rem;
-
+        color: #491e57;
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+        text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
     }
 
     .banner-subtitle2 {
         font-size: 1.2rem;
-
+        color: #491e57;
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+        text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
     }
 
 
@@ -996,7 +1024,7 @@ Final do footer */
     #nav-items {
         position: fixed;
         display: flex;
-        height: 100vh;
+        height: 40vh;
         width: 100%;
         right: 0px;
         align-items: center;
@@ -1006,6 +1034,7 @@ Final do footer */
         z-index: 1000;
         top: 77px;
         background: var(--primary);
+        transition: all 2s ease;
     }
 
     .navigation.active {
@@ -1013,6 +1042,7 @@ Final do footer */
     }
 
     .bars.active .bar:nth-child(1) {
+        transition: all 1s ease;
         transform: rotate(-45deg) translate(-5px, 6px);
     }
 
@@ -1021,6 +1051,7 @@ Final do footer */
     }
 
     .bars.active .bar:nth-child(3) {
+        transition: all 1s ease;
         transform: rotate(45deg) translate(-5px, -6px);
     }
 }
@@ -1028,7 +1059,10 @@ Final do footer */
 
 
 @media only screen and (max-width: 600px) {
-
+    .navigation,
+    .pipeline {
+        display: none;
+    }
     /* DESCRIPTIONS RESPONSIVE */
     .description-title,
     .description,
@@ -1110,7 +1144,7 @@ Final do footer */
 
     .banner {
         width: 100%;
-        background: linear-gradient(72deg, #3debb0 3%, #4e13ce 99%);
+       
     }
 
     .banner-text1 {
@@ -1127,25 +1161,26 @@ Final do footer */
     }
 
     .banner-subtitle {
-
         font-size: var(--font-size-medium);
         font-family: var(--font-header);
-        color: #a525cc;
+        color: #491e57;
         line-height: 1rem;
         padding: 10px;
         font-size-adjust: 1;
-        filter: drop-shadow(2px 1px 1px var(--brown-gray));
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+        text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
     }
 
     .banner-subtitle2 {
         font-size: var(--font-size-medium);
         font-family: var(--font-header);
-        color: #a525cc;
+        color: #491e57;
         line-height: 1rem;
         width: 310px;
         padding: 5px 15px 20px;
         font-size-adjust: 1;
-        filter: drop-shadow(2px 1px 1px var(--brown-gray));
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+        text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
 
     }
 
@@ -1170,9 +1205,11 @@ Final do footer */
 
         font-family: var(--font-body);
         padding: 0.7rem 0.5rem;
-        color: #582966;
+        color: #250730;
         width: 300px;
         margin-bottom: 1.5rem;
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+        text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
     }
 
     .buttonss {
@@ -1204,28 +1241,26 @@ Final do footer */
     /* inicio Carrocell responsivo*/
 
     .cardist {
-        margin: 0.6rem auto;
-        height: 260px;
-        width: 410px;
+        height: 300px;
+        width: 100%;
         display: flex;
-        /* Adicionando flex para centralizar conteúdo */
-        justify-content: center;
-        /* Centraliza o conteúdo horizontalmente */
-        align-items: center;
-        /* Centraliza o conteúdo verticalmente */
         flex-direction: column;
+        align-items:center;
     }
 
     .content1 {
-        height: 250px;
-        width: 370px;
+        height: 240px;
+        width: 350px;
         border-radius: 20px;
-        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+
+      
         /*  position: absolute;*/
     }
 
     .navigation1 {
-        margin: 0.2rem auto 0.4rem;
+        margin: 0.6rem auto;
         border-radius: 8px;
         justify-items: center;
         display: flex;
@@ -1233,8 +1268,8 @@ Final do footer */
     }
 
     .barx {
-        width: 62px;
-        height: 17px;
+        width: 56px;
+        height: 20px;
         border: 2px solid #fff;
         margin: 6px;
         border-radius: 5px;
@@ -1249,7 +1284,7 @@ Final do footer */
     /* CARDS RESPONSIVE */
     /* Inicio Foto Grid */
     .cards {
-        margin: 3rem 0;
+        padding: 3rem 0;
         width: 100%;
 
     }
@@ -1271,12 +1306,12 @@ Final do footer */
 
     .card {
         width: 100%;
-        height: 500px;
-        min-width: 400px;
+        height: 450px;
+        min-width: 300px;
         /* border: 1px solid var(--primary)
         ;*/
 
-        margin: 1rem 0;
+        margin: 1rem 10px;
         border-radius: 8px;
         cursor: pointer;
         transition: all 0.2s ease;
@@ -1359,7 +1394,7 @@ Final do footer */
         color: var(--brown);
         font-weight: 500;
         border: none;
-        margin: 0.4rem auto 2rem;
+        margin: 0.4rem auto 0 auto;
         cursor: pointer;
         transition: filter 0.2s;
     }
@@ -1435,14 +1470,22 @@ Final do footer */
         border: none;
         background: white;
         cursor: pointer;
-        border-radius: 50px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
+    .btn-arrow2 {
+        border: none;
+        background: white;
+        cursor: pointer;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
 
     .bx {
         font-size: 1.6rem;
         color: var(--brown);
-        padding: 10px 15px;
+        padding: 10px 35px 10px;
 
     }
 
@@ -1472,7 +1515,7 @@ Final do footer */
     #nav-items {
         position: fixed;
         display: flex;
-        height: 100vh;
+        height: 40vh;
         width: 100%;
         right: 0px;
         align-items: center;
@@ -1480,8 +1523,9 @@ Final do footer */
         flex-direction: column;
         justify-content: start;
         z-index: 1000;
-        top: 77px;
+        top: 67px;
         background: var(--primary);
+        transition: all 1s ease;
     }
 
     .navigation.active {
@@ -1489,6 +1533,7 @@ Final do footer */
     }
 
     .bars.active .bar:nth-child(1) {
+        transition: all 1s ease;
         transform: rotate(-45deg) translate(-5px, 6px);
     }
 
@@ -1497,6 +1542,7 @@ Final do footer */
     }
 
     .bars.active .bar:nth-child(3) {
+        transition: all 1s ease;
         transform: rotate(45deg) translate(-5px, -6px);
     }
 }
@@ -1568,7 +1614,9 @@ Final do footer */
 
     .banner-description {
         text-align: center;
-
+        color: #250730;
+        filter: drop-shadow(4px 1px 1px var(--brown-gray));
+        text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
     }
 
     .banner-button {

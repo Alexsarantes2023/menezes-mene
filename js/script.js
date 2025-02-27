@@ -28,7 +28,7 @@ const scrollRight = document.getElementById("right");
 // Adiciona um evento de clique ao botão de scroll para a esquerda
 scrollLeft.addEventListener("click", () => {
   card.scrollBy({
-    left: -400, // Move o elemento card 200 pixels para a esquerda
+    left: -320, // Move o elemento card 200 pixels para a esquerda
     behavior: "smooth", // Adiciona um efeito de rolagem suave
   });
   console.log("scrollLeft");
@@ -37,7 +37,7 @@ scrollLeft.addEventListener("click", () => {
 // Adiciona um evento de clique ao botão de scroll para a direita
 scrollRight.addEventListener("click", () => {
   card.scrollBy({
-    left: 400, // Move o elemento card 200 pixels para a direita
+    left: 320, // Move o elemento card 200 pixels para a direita
     behavior: "smooth", // Adiciona um efeito de rolagem suave
   });
   console.log("scrollRight");
