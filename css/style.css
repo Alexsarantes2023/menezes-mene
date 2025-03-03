@@ -23,6 +23,34 @@ body {
     background: linear-gradient(72deg, #1b18f8 3%, #000000 99%);
 }
 
+/* .section-vid {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+.caixa-video-mario {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.video111 {
+    position: fixed;
+    top: -2.5rem;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.mascara-video {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
 
 html {
     scroll-behavior: smooth;
@@ -123,13 +151,18 @@ html {
     width: 100%;
     /*background: #e4e2f5;
     background: linear-gradient(72deg, #135f46 1%, #4e13ce 99%);*/
-
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
     
     /*background: linear-gradient(72deg, #3debb0 3%, #4e13ce 99%);*/
    /* background: -webkit-radial-gradient(circle, #3debb0, #4e13ce);  Safari 5.1 - 6.0 */
     /*background: -o-radial-gradient(circle, #3debb0, #4e13ce);  Opera 11.1 - 12.0 */
    /* background: -moz-radial-gradient(circle, #3debb0, #4e13ce); /* Firefox 3.6 - 15 */
-    background: radial-gradient(circle, #420eb4,#30c594 );
+
+    /* background: radial-gradient(circle, #420eb4,#30c594 ); */
+
     /*  background-color: rgba(255, 255, 255, 0.5);
     Fundo branco com 50% de transparência */
 }
@@ -202,7 +235,6 @@ html {
     width: 50%;
     display: flex;
     transform: rotateY(180deg);
-
 }
 
 .banner-image {
@@ -385,9 +417,15 @@ html {
     display: flex;
     /* Alinha os botões de navegação em linha */
     justify-content: center;
-    /* Centraliza os botões de navegação */
-    background: radial-gradient(72deg, #3debb0 1%, #8956f3 99%);
+   
     border-radius: 1rem;
+
+
+
+    margin: 0.6rem auto;
+    border-radius: 8px;
+    
+    background: linear-gradient(72deg, #3debb0 1%, #8956f3 99%);
 }
 
 .barx {
@@ -619,7 +657,7 @@ html {
     padding: 2rem;
     font-size: 1.7rem;
     color: var(--brown);
-    border-bottom: 3px solid var();
+  
     font-weight: 700;
     font-family: var(--font-header);
 }
@@ -1522,7 +1560,7 @@ Final do footer */
     #nav-items {
         position: fixed;
         display: flex;
-        height: 40vh;
+        height: 18rem;
         width: 100%;
         right: 0px;
         align-items: center;
@@ -1636,7 +1674,7 @@ Final do footer */
 
 
     .banner-img {
-        margin: 1rem auto 2;
+        /* margin: 1rem auto 2; */
         width: 100%;
     }
 
