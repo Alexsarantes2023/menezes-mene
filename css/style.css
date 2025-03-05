@@ -889,11 +889,11 @@ html {
     justify-content: center;
     margin-bottom: 40px;
     font-size: var(--font-size-medium);
-    color: var(--brown);
+    color: var(--white);
     font-weight: 700;
     font-family: var(--font-header);
     font-size-adjust: 0.8;
-
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
 .banner-button2:hover,
@@ -920,27 +920,30 @@ html {
 .titulo-videos {
     width: 100vw;
     font-family: var(--font-header);
-    color: var(--brown);
+    color: var(--white);
     font-size: 20px;
     text-align: center;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
 #title-music {
     width: 100vw;
     margin-top: 20px;
     font-family: var(--font-header);
-    color: var(--brown);
+    color: var(--white);
     font-size: 20px;
     text-align: center;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
 .card-title {
     width: 100vw;
     margin-top: 20px;
     font-family: var(--font-header);
-    color: var(--brown);
+    color: var(--white);
     font-size: 30px;
     text-align: center;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
 .classevide {
@@ -1652,6 +1655,18 @@ Final do footer */
         --font-size-large: 4rem;
     }
 
+    #gministerio {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--font-header);
+    font-size-adjust: 0.8;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
+}
 
     .bars {
         cursor: pointer;
