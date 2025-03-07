@@ -197,18 +197,12 @@ html {
     /* font-family: var(--font-header);*/
     font-size: 5rem;
     /* color: #582966; */
-    background: radial-gradient(circle, rgba(255, 215, 0, 1) 0%, rgba(255, 215, 0, 0.4) 100%);
-    /* color:  #fae06a;
-    color: gold; */
+    /*background: linear-gradient(circle, rgba(255, 215, 0, 1) 0%, rgba(247, 37, 90, 0.904) 100%);
+     color:  #fae06a;*/
+    color: gold; 
     line-height: 118%;
     text-transform: uppercase;
     font-weight: 900;
-
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-   
 
 
     left: 0;
@@ -526,7 +520,11 @@ html {
 .cards {
 
     width: 100%;
-
+    
+    display:flex;
+    flex-direction:column; 
+   /* justify-content: center;*/
+    /*align-items: center;*/
 }
 
 
@@ -534,14 +532,25 @@ html {
 .card-content {
     width: 100%;
     display: flex;
-    margin: 0.5rem 4rem;
+    margin-left: auto;
+    margin-right:auto;
+    /* flex-direction:row; */
     justify-content: space-between;
     max-width: 1200px;
     padding: 0.3rem 8rem;
     flex-wrap: wrap;
 }
 
-
+.card-title {
+    width: 100%;
+    padding-top:2.5rem;
+    padding-bottom:2rem;
+    font-family: var(--font-header);
+    color: var(--white);
+    font-size: 30px;
+    text-align: center;
+    filter: drop-shadow(2px 1px 1px var(--brown-gray));
+}
 
 .card {
     width: 200px;
@@ -936,15 +945,7 @@ html {
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
-.card-title {
-    width: 100vw;
-    margin-top: 20px;
-    font-family: var(--font-header);
-    color: var(--white);
-    font-size: 30px;
-    text-align: center;
-    filter: drop-shadow(2px 1px 1px var(--brown-gray));
-}
+
 
 .classevide {
     width: 100%;
@@ -1377,9 +1378,8 @@ Final do footer */
     /* CARDS RESPONSIVE */
     /* Inicio Foto Grid */
     .cards {
-        padding: 3rem 0;
+        padding: 1rem 0;
         width: 100%;
-
     }
 
 
@@ -1387,10 +1387,9 @@ Final do footer */
     .card-content {
         width: 100%;
         display: flex;
-        margin: 0.5rem 4rem;
         justify-content: space-between;
         max-width: 1200px;
-        padding: 0.3rem 0;
+        padding: 0.3rem 7rem .5rem 0;
         flex-wrap: wrap;
     }
 
@@ -1513,9 +1512,7 @@ Final do footer */
 
 
 
-    .arrow {
-        display: none;
-    }
+   
 
     /* Final Foto Grid */
     .card-content {
