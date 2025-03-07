@@ -43,7 +43,7 @@ body {
 
 .video111 {
     position: fixed;
-    top: -2.5rem;
+    top: -2.9rem;
     min-height: 100%;
     min-width: 100%;
 }
@@ -94,8 +94,8 @@ html {
     height: 50px;
     font-family: var(--font-header);
     font-weight: 700;
-    margin-top: 0;
-    margin-left: 0.5rem;
+    
+    margin-left: 0.3rem;
     color: var(--brown);
     cursor: pointer;
 }
@@ -104,7 +104,7 @@ html {
 .logo a {
 
     font-size-adjust: 1;
-    padding: 3px;
+    padding: 2px;
     text-decoration: none;
     color: var(--orange);
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
@@ -1101,7 +1101,7 @@ Final do footer */
     #nav-items {
         position: fixed;
         display: flex;
-        height: 40vh;
+        height: auto;
         width: 100%;
         right: 0px;
         align-items: center;
@@ -1173,7 +1173,7 @@ Final do footer */
     .header {
         width: 100%;
         display: flex;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.1rem;
         position: fixed;
         z-index: 1001;
         background: #b12e7e;
@@ -1389,7 +1389,7 @@ Final do footer */
         display: flex;
         justify-content: space-between;
         max-width: 1200px;
-        padding: 0.3rem 7rem .5rem 0;
+        padding: 0.3rem 2.4rem .5rem 0;
         flex-wrap: wrap;
     }
 
@@ -1609,7 +1609,7 @@ Final do footer */
     #nav-items {
         position: fixed;
         display: flex;
-        height: 18rem;
+        height: auto;
         width: 100%;
         right: 0px;
         align-items: center;
