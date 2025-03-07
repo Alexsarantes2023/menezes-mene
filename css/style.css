@@ -74,7 +74,7 @@ html {
     display: flex;
     flex-direction: initial;
     align-items: start;
-    padding: 1.2rem 1.5rem;
+    padding: 1rem 1.5rem;
     position: fixed;
     z-index: 1001;
     background: rgb(177, 46, 126, 0.8);
@@ -399,7 +399,7 @@ html {
 /* inicio Carrocell responsivo*/
 
 .gmedias {
-    background: radial-gradient(circle, #420eb4,#30c594 );
+    background: radial-gradient(circle, #34a780,#3a1688 );
 }
 
 .cardist {
@@ -412,7 +412,7 @@ html {
     align-items: center;
     /* Centraliza o conteúdo verticalmente */
     flex-direction: column;
-
+    padding-bottom: 2rem;
 }
 
 .content0 {
@@ -1184,27 +1184,27 @@ Final do footer */
         display: flex;
         padding: 0 10px;
         flex-direction: column;
-        width: 18rem;
+        width: 13rem;
         height: 3.2rem;
         font-family: var(--font-header);
         font-weight: 700;
         color: var(--brown);
         cursor: pointer;
-
     }
 
     .logo a {
         width: 15rem;
-        height: 1.5rem;
+        height: 1.6rem;
         font-size-adjust: .80;
-        padding: 0 0.2rem;
+        padding: 0 0.1rem;
         text-decoration: none;
         color: var(--orange);
         filter: drop-shadow(2px 2px 2px black);
+    
     }
 
     .logo span {
-        width: 15rem;
+        width: 14rem;
         padding-left: 0.1rem;
         font-size-adjust: .80;
         color: #a525cc;
@@ -1212,8 +1212,8 @@ Final do footer */
     }
 
     .logox {
-        width: 43px;
-        height: 43px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
     }
 
@@ -1340,6 +1340,7 @@ Final do footer */
         display: flex;
         flex-direction: column;
         align-items:center;
+        padding-bottom: 2rem;
     }
 
     .content1 {
@@ -1354,7 +1355,6 @@ Final do footer */
     }
 
     .navigation1 {
-        margin: 0.6rem auto;
         border-radius: 8px;
         justify-items: center;
         display: flex;
@@ -1668,6 +1668,7 @@ Final do footer */
     .bars {
         cursor: pointer;
         margin-top: 8px;
+        
     }
 
     .bar {
