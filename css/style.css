@@ -558,7 +558,7 @@ html {
     margin: 1rem 0.5rem;
     /*  border: 1px solid var(--primary);*/
     border-radius: 8px;
-    cursor: pointer;
+    cursor: grab;
     transition: all 0.2s ease;
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
@@ -909,7 +909,8 @@ html {
 .banner-button:hover,
 .description-button2:hover {
     width: 153px;
-    filter: drop-shadow(4px 2px 2px var(--brown-gray));
+    opacity: 0.8;
+    background-color:#ff0202;
     transition: all 0.2s ease;
 }
 
@@ -967,6 +968,45 @@ html {
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
     margin-bottom: 2rem;
 }
+
+
+
+/* Inicio - icones fixos na tela */
+.android-image {
+    width: 60px;
+    position: fixed;
+    z-index: 1001;
+    left: 35px;
+    top: 120px;
+    cursor: pointer;
+    border: 2px solid #32CD32;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.android-image:hover {
+    border: 2px dashed #32CD32;
+}
+ 
+.whatsapp-content {
+    display:flex;
+    position: relative;
+}
+
+.whatsapp-contato-image {
+    width: 65px;
+    position: fixed;
+    z-index: 1001;
+    right: 20px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.whatsapp-contato-image:hover {
+    transform: rotate(90deg) translate(0, 0);
+}
+/* FIM - icones fixos na tela */
 
 /*Inicio do footerr */
 
@@ -1139,9 +1179,20 @@ Final do footer */
     
      .video111,
     .navigation,
-    .pipeline {
+    .pipeline,
+    .banner-button2 {
         display: none;
     }
+
+    .whatsapp-contato-image {
+    position: fixed;
+    z-index: 1001;
+    right: 10px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+
 
    .video112 {
         display: block;
@@ -1316,17 +1367,23 @@ Final do footer */
     }
 
     .banner-button {
-        width: 150px;
+        width: 300px;
         background: var(--orange);
         border-radius: 2rem;
         text-decoration: none;
         font-family: var(--font-body);
         color: var(--white);
-        font-weight: 600;
-        font-size: var(--font-size-small);
+        font-weight: 800;
+        font-size: var(--font-size-medium);
     }
 
-
+    .banner-button:hover,
+    .description-button2:hover {
+        width: 300px;
+        opacity: 0.8;
+        background-color:#ff0202;
+        transition: all 0.2s ease;
+    }
 
     /* Fim do BANNER  */
 
@@ -1405,7 +1462,7 @@ Final do footer */
 
         margin: 1rem 10px;
         border-radius: 8px;
-        cursor: pointer;
+        cursor: grab;
         transition: all 0.2s ease;
         filter: drop-shadow(2px 1px 1px var(--brown-gray));
     }
@@ -1518,13 +1575,14 @@ Final do footer */
     .card-content {
         flex-wrap: nowrap;
         overflow-x: scroll;
+        /* overflow-x: scroll; */
         /* Esconde a barra de rolagem Para firefox*/
         scrollbar-width: none;
         /* Esconde a barra de rolagem Para internet explore e edge*/
         -ms-overflow-style: none;
 
         /* Esconde a barra de rolagem e manter a funcinalidade*/
-        overflow: hidden;
+        overflow: whidden;
         /* Mantém a funcionalidade de rolagem vertical e manter a funcinalidade*/
         overflow-y: scroll;
         margin-left: 0;
@@ -1643,6 +1701,8 @@ Final do footer */
         transition: all 1s ease;
         transform: rotate(45deg) translate(-5px, -6px);
     }
+
+
 }
 
 @media only screen and (max-width: 1024px) {
