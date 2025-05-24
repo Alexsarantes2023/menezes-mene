@@ -772,6 +772,77 @@ html {
     filter: brightness(0.9);
 }
 
+
+
+/* Inicio de Quentions */
+.question-content {
+    width: 85%;
+    margin: 3rem auto 2rem;
+    display: flex;
+}
+
+.question-description {
+    font-size: 30px;
+    padding: .5rem;
+    text-align: center;
+}
+
+.questions-title,
+.questions-text {
+    width: 80%;
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+
+.question-text {
+    width: 100%;
+    font-size: var(--font-size-small);
+    font-family: var(--font-body);
+    margin-top: 1.5rem;
+}
+
+.question {
+    height: 3rem;
+    text-align: center;
+    padding-top: 7px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--white);
+    border-top: #c2bcbc solid 1px;
+    border-radius: 10px;
+    background: linear-gradient(70deg, rgb(100, 143, 114), rgb(78, 160, 67));
+}
+.question:hover {
+    color:#f0b512;
+    background: var(--brown-gray);
+}
+
+.question-list,
+.question-answers {
+    font-size: var(--font-size-small);
+    font-family: var(--font-body);
+    font-weight: 400;
+    padding: 0.2rem 1rem 2rem 2rem;
+    color: var(--white); 
+}
+
+.plan-btn2 {
+    color:var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    background: green;
+    border-radius: 5px;
+}
+
+/* Fim de Quentions */
+
+
+
+
 /* CONTATO  */
 .contact {
     width: 100%;
@@ -1713,6 +1784,16 @@ Final do footer */
     border-radius: 50%;
     font-size: 15px;
 }
+
+.questions-title,
+.questions-text {
+    width: 86%;
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
 }
 
 @media only screen and (max-width: 1024px) {
