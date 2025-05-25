@@ -1,10 +1,10 @@
 // Pegar o elemento pelo id
-const bars = document.getElementById("bars");
+const bars = document.getElementById("barsxxx");
 const nav = document.getElementById("navxxx");
 
 // Pegar todos os elementos <a> dentro do menu de navegação
-const navItems = document.querySelectorAll("nav-item");
-
+const navItems = document.querySelectorAll(".nav-item");
+console.log(navItems);
 // Função para abrir ou fechar o menu
 function toggleMenu() {
   nav.classList.toggle("active"); // Adiciona ou remove a classe "active" do elemento nav
@@ -19,6 +19,8 @@ bars.addEventListener("click", toggleMenu);
    item.addEventListener("click", toggleMenu);
  });
 
+
+ 
 // Cards
 // Pegar o elemento pelo id
 const card = document.getElementById("cardxx");
