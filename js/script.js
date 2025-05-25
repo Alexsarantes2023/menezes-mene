@@ -21,9 +21,9 @@ navItems.forEach((item) => {
 
 // Cards
 // Pegar o elemento pelo id
-const card = document.getElementById("card");
-const scrollLeft = document.getElementById("left");
-const scrollRight = document.getElementById("right");
+const card = document.getElementById("cardxx");
+const scrollLeft = document.getElementById("leftx");
+const scrollRight = document.getElementById("rightx");
 
 // Adiciona um evento de clique ao botão de scroll para a esquerda
 scrollLeft.addEventListener("click", () => {
