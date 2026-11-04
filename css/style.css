@@ -715,7 +715,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     max-width: 1200px;
-    padding: 0 auto;
+    margin: 0 auto;
 }
 .projetos-card {
     background: rgba(255, 255, 255, 0.05);
