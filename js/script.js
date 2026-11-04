@@ -24,10 +24,8 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const ministrySlider = document.querySelector('.gmedias');
 const ministrySlides = [...document.querySelectorAll('.gmedias input[name="slide"]')];
 
-if (ministrySlider && ministrySlides.length > 1 && !prefersReducedMotion) {
+if (ministrySlider && ministrySlides.length > 1) {
   let slideTimer;
-  let isSliderVisible = false;
-  let isInteractionPaused = false;
 
   const stopSlideTimer = () => {
     window.clearInterval(slideTimer);
@@ -35,50 +33,16 @@ if (ministrySlider && ministrySlides.length > 1 && !prefersReducedMotion) {
   };
 
   const startSlideTimer = () => {
-    if (slideTimer || !isSliderVisible || isInteractionPaused || document.hidden) return;
+    if (slideTimer || document.hidden) return;
 
     slideTimer = window.setInterval(() => {
       const currentIndex = ministrySlides.findIndex((slide) => slide.checked);
-      ministrySlides[(currentIndex + 1) % ministrySlides.length].checked = true;
+      const nextIndex = (Math.max(currentIndex, 0) + 1) % ministrySlides.length;
+      ministrySlides[nextIndex].checked = true;
     }, 3000);
   };
 
-  if ('IntersectionObserver' in window) {
-    const sliderVisibilityObserver = new IntersectionObserver(([entry]) => {
-      isSliderVisible = entry.isIntersecting;
-      if (isSliderVisible) startSlideTimer();
-      else stopSlideTimer();
-    }, { threshold: 0.15 });
-
-    sliderVisibilityObserver.observe(ministrySlider);
-  } else {
-    isSliderVisible = true;
-    startSlideTimer();
-  }
-  ministrySlider.addEventListener('pointerenter', () => {
-    isInteractionPaused = true;
-    stopSlideTimer();
-  });
-  ministrySlider.addEventListener('pointerleave', () => {
-    isInteractionPaused = false;
-    startSlideTimer();
-  });
-  ministrySlider.addEventListener('focusin', () => {
-    isInteractionPaused = true;
-    stopSlideTimer();
-  });
-  ministrySlider.addEventListener('focusout', (event) => {
-    if (!ministrySlider.contains(event.relatedTarget)) {
-      isInteractionPaused = false;
-      startSlideTimer();
-    }
-  });
-  ministrySlides.forEach((slide) => {
-    slide.addEventListener('change', () => {
-      stopSlideTimer();
-      startSlideTimer();
-    });
-  });
+  startSlideTimer();
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stopSlideTimer();
     else startSlideTimer();
