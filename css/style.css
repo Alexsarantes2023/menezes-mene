@@ -820,8 +820,8 @@ html {
 
 .description-card.scroll-reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 550ms ease, transform 550ms ease;
+    transform: translateY(64px) scale(0.97);
+    transition: opacity 800ms ease, transform 800ms ease;
 }
 
 .description-card.scroll-reveal.is-visible {
