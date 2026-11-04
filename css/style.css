@@ -1405,6 +1405,27 @@ html {
     filter: drop-shadow(2px 1px 1px var(--orange));
 }
 
+.footer-image.coin-spin {
+    animation: footer-coin-spin 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    transform-style: preserve-3d;
+}
+
+@keyframes footer-coin-spin {
+    from {
+        transform: perspective(600px) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(600px) rotateY(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-image.coin-spin {
+        animation: none;
+    }
+}
+
 .footer-icons {
     margin: 1rem auto 0 auto;
     list-style: none;

@@ -62,6 +62,18 @@ if (contactImage && 'IntersectionObserver' in window && !prefersReducedMotion) {
   contactImageObserver.observe(contactImage);
 }
 
+const footerImage = document.querySelector('.footer-image');
+
+if (footerImage && 'IntersectionObserver' in window && !prefersReducedMotion) {
+  const footerImageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('coin-spin', entry.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+
+  footerImageObserver.observe(footerImage);
+}
+
 // Cards
 // Pegar o elemento pelo id
 const card = document.getElementById("cardxx");
