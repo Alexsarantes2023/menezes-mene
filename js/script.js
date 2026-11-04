@@ -49,6 +49,19 @@ if ('IntersectionObserver' in window && !prefersReducedMotion) {
   });
 }
 
+const contactImage = document.querySelector('.contact-image');
+
+if (contactImage && 'IntersectionObserver' in window && !prefersReducedMotion) {
+  const contactImageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+
+  contactImage.classList.add('scroll-reveal');
+  contactImageObserver.observe(contactImage);
+}
+
 // Cards
 // Pegar o elemento pelo id
 const card = document.getElementById("cardxx");
