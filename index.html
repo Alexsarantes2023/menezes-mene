@@ -612,17 +612,33 @@
       <h2 class="pix-title" id="pix-pagar">PAGAMENTO PIX</h2>
       <img src="./img5/qrcode-pix.png" alt="QR code para pagamento via Pix para José Anchieta Menezes" class="pix-img" loading="lazy" decoding="async">
     </div>
-    <div class="pix-info">
-      <p class="info-pix">Chave PIX: (13) 98135-4808
-        Nome: José Anchieta Menezes
-        Tipo de Chave: Telefone
-        Código da transferência: PagamentoBanda
-  
-        Código QrCode (Copia e Cola):
-        00020126360014BR.GOV.BCB.
-        PIX0114+55139813548085204000053039865802BR5921
-        Jose Anchieta Menezes6011Santos -   
-      </p>
+    <div class="pix-info" aria-label="Dados para pagamento via Pix">
+      <h3 class="pix-info-title">Pague de forma rápida e segura</h3>
+      <dl class="pix-details">
+        <div>
+          <dt>Chave Pix</dt>
+          <dd><a href="tel:+5513981354808">+55 (13) 98135-4808</a></dd>
+        </div>
+        <div>
+          <dt>Nome</dt>
+          <dd>José Anchieta Menezes</dd>
+        </div>
+        <div>
+          <dt>Tipo de chave</dt>
+          <dd>Telefone</dd>
+        </div>
+        <div>
+          <dt>Identificação</dt>
+          <dd>PagamentoBanda</dd>
+        </div>
+      </dl>
+      <div class="pix-copy-box">
+        <p class="pix-copy-label">Pix Copia e Cola</p>
+        <p class="pix-copy-help">Copie o código completo e cole no aplicativo do seu banco.</p>
+        <code class="pix-code" id="pix-copy-code">00020126360014BR.GOV.BCB.PIX0114+55139813548085204000053039865802BR5921Jose Anchieta Menezes6011Santos - SP62180514PagamentoBanda63044DB5</code>
+        <button class="pix-copy-button" id="pix-copy-button" type="button">Copiar código Pix</button>
+        <p class="pix-copy-status" id="pix-copy-status" role="status" aria-live="polite"></p>
+      </div>
     </div>
   </div>
 </section>

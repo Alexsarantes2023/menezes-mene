@@ -21,6 +21,54 @@ bars.addEventListener("click", toggleMenu);
 const serviceCards = document.querySelectorAll('.description-content .description-card');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const pixCopyButton = document.getElementById('pix-copy-button');
+const pixCopyCode = document.getElementById('pix-copy-code');
+const pixCopyStatus = document.getElementById('pix-copy-status');
+
+if (pixCopyButton && pixCopyCode && pixCopyStatus) {
+  const copyPixCode = async (text) => {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const temporaryInput = document.createElement('textarea');
+    temporaryInput.value = text;
+    temporaryInput.setAttribute('readonly', '');
+    temporaryInput.style.position = 'fixed';
+    temporaryInput.style.opacity = '0';
+    document.body.append(temporaryInput);
+    let copied = false;
+    try {
+      temporaryInput.select();
+      copied = document.execCommand('copy');
+    } finally {
+      temporaryInput.remove();
+    }
+
+    if (!copied) throw new Error('The browser could not copy the Pix code.');
+  };
+
+  pixCopyButton.addEventListener('click', async () => {
+    pixCopyButton.disabled = true;
+    pixCopyButton.textContent = 'Copiar código Pix';
+    pixCopyStatus.textContent = '';
+    pixCopyStatus.removeAttribute('data-state');
+
+    try {
+      await copyPixCode(pixCopyCode.textContent.trim());
+      pixCopyButton.textContent = 'Código Pix copiado!';
+      pixCopyStatus.textContent = 'Agora cole o código no aplicativo do seu banco.';
+    } catch (error) {
+      console.error('Não foi possível copiar o código Pix:', error);
+      pixCopyStatus.dataset.state = 'error';
+      pixCopyStatus.textContent = 'Não foi possível copiar automaticamente. Selecione o código acima para copiá-lo.';
+    } finally {
+      pixCopyButton.disabled = false;
+    }
+  });
+}
+
 const albumSection = document.querySelector('#certificacoes');
 const albumTrack = document.querySelector('#certificacoes .projetos-caixa');
 const albumCards = [...document.querySelectorAll('#certificacoes .projetos-card')];

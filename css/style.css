@@ -978,15 +978,140 @@ html {
 }
 
 
-.pix-info p {
-    width: 500px;
-    height: 200px;
-    font-size: .8rem;
+.pix-info {
+    width: min(560px, calc(100% - 2rem));
+    margin: 0 auto 2.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.25rem;
+    background: rgba(18, 12, 57, 0.72);
     color: var(--white);
-    font-weight: 600;
+    font-family: var(--font-body);
+    box-shadow: 0 16px 40px rgba(8, 5, 28, 0.25);
+}
+
+.pix-info-title {
+    margin-bottom: 1.25rem;
     font-family: var(--font-header);
-    margin-top: 1rem;
-    padding: 5px 20px 5px 20px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.pix-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.pix-details dt {
+    margin-bottom: 0.25rem;
+    color: #f3ce5e;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.pix-details dd {
+    overflow-wrap: anywhere;
+    font-size: 1rem;
+}
+
+.pix-details a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.pix-copy-box {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pix-copy-label {
+    font-weight: 700;
+}
+
+.pix-copy-help {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pix-code {
+    display: block;
+    max-height: 5.5rem;
+    overflow: auto;
+    padding: 0.75rem;
+    border-radius: 0.6rem;
+    background: rgba(7, 5, 25, 0.55);
+    color: #fff;
+    font: 0.82rem/1.6 Consolas, "Courier New", monospace;
+    overflow-wrap: anywhere;
+    user-select: all;
+}
+
+.pix-copy-button {
+    min-height: 3.25rem;
+    padding: 0.8rem 1.2rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background: #168a53;
+    color: var(--white);
+    font: 700 1rem var(--font-header);
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.pix-copy-button:hover {
+    background: #0f7042;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
+}
+
+.pix-copy-button:focus-visible,
+.question-list .plan-btn2:focus-visible {
+    outline: 3px solid #f3ce5e;
+    outline-offset: 3px;
+}
+
+.pix-copy-button:disabled {
+    cursor: wait;
+    opacity: 0.75;
+}
+
+.pix-copy-status {
+    min-height: 1.25em;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.pix-copy-status[data-state="error"] {
+    color: #ffd1d1;
+}
+
+.question-list .plan-btn2 {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0.75rem;
+    background: #168a53;
+    line-height: 1.35;
+    text-align: center;
+    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.question-list .plan-btn2:hover {
+    background: #0f7042;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
 }
 /* final da area de pagamento pix */
 
@@ -2371,15 +2496,22 @@ Final do footer */
 }
 
 
-.pix-info p {
-    width: 400px;
-    height: 200px;
-    font-size: .8rem;
-    color: var(--white);
-    font-weight: 600;
-    font-family: var(--font-header);
-    margin-top: 1rem;
-    padding: 5px 20px 5px 20px;
+.pix-info {
+    width: min(560px, calc(100% - 2rem));
+    padding: 1.1rem;
+}
+
+.pix-details {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+}
+
+.pix-copy-box {
+    padding: 0.85rem;
+}
+
+.question-list .plan-btn2 {
+    width: 100%;
 }
 /* final da area de pagamento pix */
 
