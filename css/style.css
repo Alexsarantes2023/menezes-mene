@@ -818,6 +818,25 @@ html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.description-card.scroll-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 550ms ease, transform 550ms ease;
+}
+
+.description-card.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .description-card.scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 .description-title {
     color: var(--brown);
     font-size: var(--font-size-small);

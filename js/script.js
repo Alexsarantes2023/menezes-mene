@@ -18,8 +18,22 @@ bars.addEventListener("click", toggleMenu);
    item.addEventListener("click", toggleMenu);
  });
 
+const serviceCards = document.querySelectorAll('.description-content .description-card');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
- 
+if ('IntersectionObserver' in window && !prefersReducedMotion) {
+  const serviceCardsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+
+  serviceCards.forEach((serviceCard) => {
+    serviceCard.classList.add('scroll-reveal');
+    serviceCardsObserver.observe(serviceCard);
+  });
+}
+
 // Cards
 // Pegar o elemento pelo id
 const card = document.getElementById("cardxx");
