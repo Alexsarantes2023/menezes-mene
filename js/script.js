@@ -25,6 +25,15 @@ const ministrySlider = document.querySelector('.gmedias');
 const ministrySlides = [...document.querySelectorAll('.gmedias input[name="slide"]')];
 
 if (ministrySlider && ministrySlides.length > 1) {
+  const slideIndicators = [...ministrySlider.querySelectorAll('.navigation1 .barx')];
+  const updateSlideIndicators = () => {
+    const activeSlide = ministrySlides.find((slide) => slide.checked);
+
+    slideIndicators.forEach((indicator, index) => {
+      indicator.classList.toggle('is-active', ministrySlides[index] === activeSlide);
+    });
+  };
+
   let slideTimer;
 
   const stopSlideTimer = () => {
@@ -39,9 +48,14 @@ if (ministrySlider && ministrySlides.length > 1) {
       const currentIndex = ministrySlides.findIndex((slide) => slide.checked);
       const nextIndex = (Math.max(currentIndex, 0) + 1) % ministrySlides.length;
       ministrySlides[nextIndex].checked = true;
+      updateSlideIndicators();
     }, 3000);
   };
 
+  updateSlideIndicators();
+  ministrySlides.forEach((slide) => {
+    slide.addEventListener('change', updateSlideIndicators);
+  });
   startSlideTimer();
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) stopSlideTimer();

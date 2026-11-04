@@ -489,7 +489,8 @@ html {
     transition: 0.4s;
 }
 
-.barx:hover {
+.barx:hover,
+.barx.is-active {
     background-color: #fff;
 }
 
