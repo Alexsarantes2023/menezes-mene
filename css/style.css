@@ -776,7 +776,7 @@ html {
 
 /* DESCRIPTIONS */
 .descriptions {
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding-bottom: 2rem;
     /* background: hwb(60 86% 3%); */
@@ -1148,7 +1148,10 @@ html {
 .musicmenezes {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 #musica {
@@ -1157,8 +1160,54 @@ html {
     filter: drop-shadow(2px 1px 1px var(--brown-gray));
 }
 
+.media-dialog {
+    width: min(90vw, 420px);
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 1rem;
+    color: var(--brown);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.media-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.media-dialog h2 {
+    margin-bottom: 0.75rem;
+    font-family: var(--font-header);
+}
+
+.media-dialog p {
+    margin-bottom: 1.25rem;
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+.media-dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.media-dialog-actions button {
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 2rem;
+    background: var(--button-light);
+    color: var(--brown);
+    cursor: pointer;
+    font: inherit;
+}
+
+.media-dialog-actions button:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 3px;
+}
+
 .titulo-videos {
-    width: 100vw;
+    width: 100%;
     font-family: var(--font-header);
     color: var(--white);
     font-size: 20px;
@@ -1167,7 +1216,7 @@ html {
 }
 
 #title-music {
-    width: 100vw;
+    width: 100%;
     margin-top: 20px;
     font-family: var(--font-header);
     color: var(--white);
@@ -1256,7 +1305,7 @@ html {
 /*Inicio do footerr */
 
 .footerr {
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1264,7 +1313,7 @@ html {
 }
 
 .footer-contacto-pai {
-    width: 100vw;
+    width: 100%;
     display: flex;
     Margin-top: 1rem;
     align-items: center;
@@ -1940,8 +1989,6 @@ Final do footer */
         /* Esconde a barra de rolagem Para internet explore e edge*/
         -ms-overflow-style: none;
 
-        /* Esconde a barra de rolagem e manter a funcinalidade*/
-        overflow: whidden;
         /* Mantém a funcionalidade de rolagem vertical e manter a funcinalidade*/
         overflow-y: scroll;
         margin-left: 0;
