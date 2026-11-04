@@ -129,6 +129,42 @@ if ('IntersectionObserver' in window && !prefersReducedMotion) {
 
 const faqItems = document.querySelectorAll('.questions-text > details.question-text');
 
+faqItems.forEach((faqItem) => {
+  const summary = faqItem.querySelector('summary');
+  const panel = faqItem.querySelector('.question-panel');
+  let panelAnimation;
+
+  if (!summary || !panel || typeof panel.animate !== 'function' || prefersReducedMotion) return;
+
+  summary.addEventListener('click', (event) => {
+    event.preventDefault();
+    panelAnimation?.cancel();
+
+    const opening = !faqItem.open;
+    if (opening) faqItem.open = true;
+
+    const animation = panel.animate(
+      [
+        { gridTemplateRows: opening ? '0fr' : '1fr' },
+        { gridTemplateRows: opening ? '1fr' : '0fr' },
+      ],
+      {
+        duration: 420,
+        easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+        fill: 'both',
+      },
+    );
+    panelAnimation = animation;
+
+    animation.addEventListener('finish', () => {
+      if (panelAnimation !== animation) return;
+      if (!opening) faqItem.open = false;
+      animation.cancel();
+      panelAnimation = undefined;
+    }, { once: true });
+  });
+});
+
 if ('IntersectionObserver' in window && !prefersReducedMotion) {
   const faqItemsObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

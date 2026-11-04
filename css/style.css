@@ -1058,9 +1058,40 @@ html {
     border-radius: 10px;
     background: linear-gradient(70deg, rgb(100, 143, 114), rgb(78, 160, 67));
 }
+
+.question-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-top: 0;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: transparent;
+    transition: margin-top 420ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 300ms ease,
+        border-color 300ms ease;
+}
+
+.question-panel-content {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.question-text[open] .question-panel {
+    grid-template-rows: 1fr;
+    margin-top: 0.65rem;
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.08);
+}
+
 .question:hover {
     color:#f0b512;
     background: var(--brown-gray);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .question-panel {
+        transition: none;
+    }
 }
 
 .question-list,
