@@ -791,8 +791,8 @@ html {
     inset: -12px;
     content: "";
     background:
-        linear-gradient(115deg, rgba(27, 24, 248, 0.48), rgba(177, 46, 126, 0.42) 55%, rgba(0, 0, 0, 0.66)),
-        url("../img4/photo-1403.webp") center / cover no-repeat;
+        linear-gradient(115deg, rgba(27, 24, 248, 0.22), rgba(177, 46, 126, 0.2) 55%, rgba(0, 0, 0, 0.42)),
+        url("../img/services-background.svg") center / cover no-repeat;
     filter: blur(5px);
     transform: scale(1.02);
 }
@@ -1056,16 +1056,32 @@ html {
 
 /* CONTATO  */
 .contact {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     width: 100%;
-    background: var(--white);
+    background: #20134f;
     
 }
+
+.contact::before {
+    position: absolute;
+    z-index: -1;
+    inset: -10px;
+    content: "";
+    background:
+        linear-gradient(110deg, rgba(27, 24, 248, 0.34), rgba(177, 46, 126, 0.28) 58%, rgba(0, 0, 0, 0.36)),
+        url("../img/contact-background.svg") center / cover no-repeat;
+    filter: blur(4px);
+    transform: scale(1.02);
+}
+
 .border-top {
     width:90%;
     display:block;
     margin-left:auto;
     margin-right: auto;
-    border-top: 2px solid rgb(0,0,0, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 .contact-content {
     width: 90%;
@@ -1078,7 +1094,7 @@ html {
     text-align: center;
     padding: 3rem 0;
     font-size: var(--font-size-medium);
-    color: var(--brown);
+    color: var(--white);
     font-weight: 600;
     font-family: var(--font-header);
     font-size-adjust: 0.8;
