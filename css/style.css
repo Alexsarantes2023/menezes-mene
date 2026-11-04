@@ -1943,6 +1943,10 @@ Final do footer */
     scrollbar-width: none; /* Para Firefox */
 }
 
+.projetos-card {
+    flex: 0 0 100%;
+}
+
 .projetos-caixa::-webkit-scrollbar {
     display: none; /* Para Chrome, Safari e Edge */
 }

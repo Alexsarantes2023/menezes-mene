@@ -21,6 +21,57 @@ bars.addEventListener("click", toggleMenu);
 const serviceCards = document.querySelectorAll('.description-content .description-card');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const albumSection = document.querySelector('#certificacoes');
+const albumTrack = document.querySelector('#certificacoes .projetos-caixa');
+const albumCards = [...document.querySelectorAll('#certificacoes .projetos-card')];
+const mobileAlbumQuery = window.matchMedia('(max-width: 600px)');
+
+if (albumSection && albumTrack && albumCards.length > 1 && !prefersReducedMotion) {
+  let isAlbumVisible = false;
+  let albumTimer;
+
+  const stopAlbumAutoplay = () => {
+    window.clearInterval(albumTimer);
+    albumTimer = undefined;
+  };
+
+  const startAlbumAutoplay = () => {
+    if (albumTimer || !isAlbumVisible || !mobileAlbumQuery.matches || document.hidden) return;
+
+    albumTimer = window.setInterval(() => {
+      const trackLeft = albumTrack.getBoundingClientRect().left;
+      const cardPositions = albumCards.map((albumCard) =>
+        albumCard.getBoundingClientRect().left - trackLeft + albumTrack.scrollLeft);
+      const currentIndex = cardPositions.reduce((closestIndex, position, index) =>
+        Math.abs(position - albumTrack.scrollLeft) < Math.abs(cardPositions[closestIndex] - albumTrack.scrollLeft)
+          ? index
+          : closestIndex, 0);
+      const nextIndex = (currentIndex + 1) % albumCards.length;
+
+      albumTrack.scrollTo({ left: cardPositions[nextIndex], behavior: 'smooth' });
+    }, 3000);
+  };
+
+  const albumVisibilityObserver = new IntersectionObserver(([entry]) => {
+    isAlbumVisible = entry.isIntersecting;
+    if (isAlbumVisible) startAlbumAutoplay();
+    else stopAlbumAutoplay();
+  }, { threshold: 0.1 });
+
+  albumVisibilityObserver.observe(albumSection);
+  mobileAlbumQuery.addEventListener('change', () => {
+    if (mobileAlbumQuery.matches) startAlbumAutoplay();
+    else stopAlbumAutoplay();
+  });
+  albumTrack.addEventListener('pointerdown', stopAlbumAutoplay);
+  albumTrack.addEventListener('pointerup', startAlbumAutoplay);
+  albumTrack.addEventListener('pointercancel', startAlbumAutoplay);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAlbumAutoplay();
+    else startAlbumAutoplay();
+  });
+}
+
 const ministrySlider = document.querySelector('.gmedias');
 const ministrySlides = [...document.querySelectorAll('.gmedias input[name="slide"]')];
 
