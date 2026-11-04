@@ -1010,6 +1010,7 @@ html {
     width: 90%;
     margin: auto;
     display: flex;
+    align-items: center;
 }
 
 .contact-title {
@@ -1025,7 +1026,7 @@ html {
 .contact-form {
     width: 50%;
     display: flex;
-    margin: 2rem;
+    margin: 2rem 0;
     row-gap: 1rem;
     flex-direction: column;
     align-items: center;
@@ -1039,6 +1040,7 @@ html {
     height: 60px;
     border: solid 3px var(--gray);
     width: 475px;
+    max-width: 100%;
 }
 
 .contact-form textarea {
@@ -1048,14 +1050,21 @@ html {
     height: 286px;
     border: solid 3px var(--gray);
     width: 475px;
+    max-width: 100%;
     font-family: var(--font-body);
 }
 
 .contact-img {
-    width: 70%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contact-image {
+    display: block;
+    width: min(100%, 480px);
+    height: auto;
 }
 
 .contact-btn {
@@ -1203,10 +1212,25 @@ html {
     border: 2px solid #32CD32;
     border-radius: 50%;
     font-size: 15px;
+    transition: transform 180ms ease, filter 180ms ease;
 }
 
-.android-image:hover {
+.android-image:hover,
+.area-content a:focus-visible .android-image {
     border: 2px dashed #32CD32;
+    transform: translateY(-3px) scale(1.08);
+    filter: drop-shadow(0 0 7px rgba(50, 205, 50, 0.65));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .android-image {
+        transition: none;
+    }
+
+    .android-image:hover,
+    .area-content a:focus-visible .android-image {
+        transform: none;
+    }
 }
  
 .whatsapp-content {
