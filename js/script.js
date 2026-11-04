@@ -45,15 +45,16 @@ scrollRight.addEventListener("click", () => {
 
 
 const audio = document.getElementById('musica');
-const audio2 = document.getElementById('musica2');
-const audio3 = document.getElementById('musica3');
-const audio4 = document.getElementById('musica4');
 audio.volume = 0.3;
-audio2.volume = 0.3;
-audio3.volume = 0.3;
-audio4.volume = 0.3;
 
-const backgroundVideos = [...document.querySelectorAll('.caixa-video-mario video')];
+document.querySelectorAll('.classevide .enzo').forEach((video) => {
+  video.autoplay = false;
+  video.preload = 'none';
+  video.pause();
+});
+
+const backgroundVideo = [...document.querySelectorAll('.caixa-video-mario video')]
+  .find((video) => getComputedStyle(video).display !== 'none');
 const mediaDialog = document.getElementById('media-dialog');
 const mediaDialogMessage = document.getElementById('media-dialog-message');
 const mediaPlayButton = document.getElementById('media-play-button');
@@ -91,27 +92,41 @@ async function attemptPlayback(mediaType, mediaElements) {
   } else {
     blockedMedia.add(mediaType);
   }
+
+  return results.every(Boolean);
 }
 
-async function checkAutoplay() {
-  await Promise.all([
-    attemptPlayback('audio', [audio]),
-    attemptPlayback('video', backgroundVideos),
-  ]);
-
-  if (blockedMedia.size > 0) {
+function showBlockedMediaPrompt() {
+  if (blockedMedia.size > 0 && !mediaDialog.open) {
     mediaDialogMessage.textContent = getBlockedMediaMessage();
     mediaDialog.showModal();
   }
 }
 
+async function playBackgroundVideo() {
+  if (!backgroundVideo) return;
+
+  await attemptPlayback('video', [backgroundVideo]);
+  showBlockedMediaPrompt();
+}
+
+audio.addEventListener('ended', playBackgroundVideo);
+
+async function checkAutoplay() {
+  await attemptPlayback('audio', [audio]);
+  showBlockedMediaPrompt();
+}
+
 mediaPlayButton.addEventListener('click', async () => {
   const retries = [];
   if (blockedMedia.has('audio')) retries.push(attemptPlayback('audio', [audio]));
-  if (blockedMedia.has('video')) retries.push(attemptPlayback('video', backgroundVideos));
+  if (blockedMedia.has('video') && backgroundVideo) {
+    retries.push(attemptPlayback('video', [backgroundVideo]));
+  }
 
   mediaDialog.close();
   await Promise.all(retries);
+  showBlockedMediaPrompt();
 });
 
 mediaDismissButton.addEventListener('click', () => mediaDialog.close());
