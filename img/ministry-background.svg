@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151451"/>
+      <stop offset=".52" stop-color="#24155A"/>
+      <stop offset="1" stop-color="#581B5B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(650 420 -380 588 1010 270)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F05A9D" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#F05A9D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1440v900H0z"/>
+  <path fill="url(#glow)" d="M0 0h1440v900H0z"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 700c180-120 300-120 480 0s300 120 480 0 300-120 480 0" stroke="#FFF" stroke-opacity=".08" stroke-width="3"/>
+    <path d="M0 730c180-120 300-120 480 0s300 120 480 0 300-120 480 0" stroke="#F3CE5E" stroke-opacity=".12" stroke-width="2"/>
+    <path d="m360 180 22 66 70 2-56 42 20 68-56-40-57 40 22-68-55-42 70-2 20-66Z" stroke="#F3CE5E" stroke-opacity=".3" stroke-width="3"/>
+    <path d="m1080 570 20 60 64 2-51 38 18 62-51-36-52 36 20-62-50-38 63-2 19-60Z" stroke="#F05A9D" stroke-opacity=".28" stroke-width="3"/>
+    <path d="M640 280v160m0-160 80-20v154" stroke="#FFF" stroke-opacity=".15" stroke-width="8"/>
+    <ellipse cx="619" cy="450" rx="24" ry="16" transform="rotate(-18 619 450)" fill="#F3CE5E" fill-opacity=".16" stroke="#F3CE5E" stroke-opacity=".25" stroke-width="2"/>
+    <ellipse cx="699" cy="429" rx="24" ry="16" transform="rotate(-18 699 429)" fill="#F3CE5E" fill-opacity=".16" stroke="#F3CE5E" stroke-opacity=".25" stroke-width="2"/>
+  </g>
+  <g fill="#FFF" fill-opacity=".22">
+    <circle cx="178" cy="390" r="5"/>
+    <circle cx="890" cy="170" r="4"/>
+    <circle cx="920" cy="780" r="5"/>
+    <circle cx="1280" cy="330" r="4"/>
+  </g>
+</svg>

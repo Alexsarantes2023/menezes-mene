@@ -417,7 +417,18 @@ html {
 /* inicio Carrocell responsivo*/
 
 .gmedias {
-    background: radial-gradient(circle, #34a780,#3a1688 );
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #17145e;
+}
+
+.gmedias::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: url("../img/ministry-background.svg") center / cover no-repeat;
 }
 
 .cardist {
@@ -790,9 +801,7 @@ html {
     z-index: -1;
     inset: 0;
     content: "";
-    background:
-        linear-gradient(115deg, rgba(27, 24, 248, 0.22), rgba(177, 46, 126, 0.2) 55%, rgba(0, 0, 0, 0.42)),
-        url("../img/services-background.svg") center / cover no-repeat;
+    background: url("../img/services-background-v2.svg") center / cover no-repeat;
 }
 
 .descriptions-title {
