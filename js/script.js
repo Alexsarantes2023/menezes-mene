@@ -97,14 +97,12 @@ const blockedMedia = new Set();
 function getBlockedMediaMessage() {
   const mediaNames = [];
 
-  if (blockedMedia.has('audio')) mediaNames.push('a música');
-  if (blockedMedia.has('video')) mediaNames.push('o vídeo de fundo');
+  if (blockedMedia.has('audio')) mediaNames.push('da música');
+  if (blockedMedia.has('video')) mediaNames.push('do vídeo de fundo');
 
-  const mediaDescription = mediaNames.length > 1
-    ? `${mediaNames[0]} e ${mediaNames[1]}`
-    : mediaNames[0];
+  const mediaDescription = mediaNames.join(' e ');
 
-  return `O navegador bloqueou a reprodução automática de ${mediaDescription}. Deseja tentar reproduzir agora?`;
+  return `O navegador bloqueou a reprodução automática ${mediaDescription}. Deseja tentar reproduzir agora?`;
 }
 
 async function attemptPlayback(mediaType, mediaElements) {
