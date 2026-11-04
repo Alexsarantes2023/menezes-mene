@@ -974,6 +974,33 @@ html {
     margin-top: 1.5rem;
 }
 
+.question-text.scroll-reveal {
+    opacity: 0;
+    transition: opacity 850ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.question-text.scroll-reveal.from-right {
+    transform: translateX(64px);
+}
+
+.question-text.scroll-reveal.from-left {
+    transform: translateX(-64px);
+}
+
+.question-text.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .question-text.scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 .question {
     height: 3rem;
     text-align: center;

@@ -34,6 +34,21 @@ if ('IntersectionObserver' in window && !prefersReducedMotion) {
   });
 }
 
+const faqItems = document.querySelectorAll('.questions-text > details.question-text');
+
+if ('IntersectionObserver' in window && !prefersReducedMotion) {
+  const faqItemsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.15 });
+
+  faqItems.forEach((faqItem, index) => {
+    faqItem.classList.add('scroll-reveal', index === 1 ? 'from-left' : 'from-right');
+    faqItemsObserver.observe(faqItem);
+  });
+}
+
 // Cards
 // Pegar o elemento pelo id
 const card = document.getElementById("cardxx");
