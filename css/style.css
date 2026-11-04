@@ -793,7 +793,7 @@ html {
     background:
         linear-gradient(115deg, rgba(27, 24, 248, 0.22), rgba(177, 46, 126, 0.2) 55%, rgba(0, 0, 0, 0.42)),
         url("../img/services-background.svg") center / cover no-repeat;
-    filter: blur(5px);
+    filter: blur(1.5px);
     transform: scale(1.02);
 }
 
@@ -1072,7 +1072,7 @@ html {
     background:
         linear-gradient(110deg, rgba(27, 24, 248, 0.34), rgba(177, 46, 126, 0.28) 58%, rgba(0, 0, 0, 0.36)),
         url("../img/contact-background.svg") center / cover no-repeat;
-    filter: blur(4px);
+    filter: blur(1.5px);
     transform: scale(1.02);
 }
 
