@@ -55,6 +55,10 @@ document.querySelectorAll('.classevide .enzo').forEach((video) => {
 
 const backgroundVideo = [...document.querySelectorAll('.caixa-video-mario video')]
   .find((video) => getComputedStyle(video).display !== 'none');
+if (backgroundVideo) {
+  backgroundVideo.muted = true;
+  backgroundVideo.volume = 0.3;
+}
 const mediaDialog = document.getElementById('media-dialog');
 const mediaDialogMessage = document.getElementById('media-dialog-message');
 const mediaPlayButton = document.getElementById('media-play-button');
@@ -103,17 +107,29 @@ function showBlockedMediaPrompt() {
   }
 }
 
-async function playBackgroundVideo() {
+async function enableBackgroundVideoAudio() {
   if (!backgroundVideo) return;
 
-  await attemptPlayback('video', [backgroundVideo]);
+  if (backgroundVideo.paused) {
+    const started = await attemptPlayback('video', [backgroundVideo]);
+    if (!started) {
+      showBlockedMediaPrompt();
+      return;
+    }
+  }
+
+  audio.pause();
+  backgroundVideo.muted = false;
   showBlockedMediaPrompt();
 }
 
-audio.addEventListener('ended', playBackgroundVideo);
+audio.addEventListener('ended', enableBackgroundVideoAudio);
 
 async function checkAutoplay() {
-  await attemptPlayback('audio', [audio]);
+  await Promise.all([
+    attemptPlayback('audio', [audio]),
+    attemptPlayback('video', backgroundVideo ? [backgroundVideo] : []),
+  ]);
   showBlockedMediaPrompt();
 }
 
