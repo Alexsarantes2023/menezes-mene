@@ -820,14 +820,16 @@ html {
 .description-card {
     width: calc(40% - 20px);
     max-width: 40%;
-    padding: 2.5rem 2rem;
-    background: #f0ecec;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.94);
     font-family: var(--font-body);
-    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-top: 4px solid var(--orange);
+    border-radius: 1.5rem;
     display: flex;
-    row-gap: 1rem;
+    row-gap: 0.85rem;
     flex-direction: column;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 36px rgba(7, 9, 35, 0.2);
 }
 
 .description-card.scroll-reveal {
@@ -851,8 +853,24 @@ html {
 }
 
 .description-title {
-    color: var(--brown);
-    font-size: var(--font-size-small);
+    color: #401b70;
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.description-card .description {
+    margin: 0;
+    color: #373246;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.description-rating {
+    color: #c77b00;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    line-height: 1;
 }
 
 .description-button {
@@ -1121,6 +1139,18 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .contact-form input {
@@ -2434,8 +2464,7 @@ Final do footer */
     }
 
     .description-title {
-        color: var(--brown);
-        font-size: var(--font-size-medium);
+        font-size: 1.15rem;
     }
 
     .description-card {

@@ -3,14 +3,54 @@
 
 <head>
   <!--Configurações do site-->
-  <title>Ministério We are the church</title>
   <meta charset="UTF-8" />
-  <meta name="description" content="Menezes Mêne: apresentações musicais para eventos, aulas de música e contato para orçamentos." />
-  <meta name="author" content="Alexsandro_Antonio_Arantes" />
+  <title>Menezes Mêne | Shows e aulas de música em Santos</title>
+  <meta name="description" content="Menezes Mêne oferece shows e apresentações musicais em Santos e região, além de aulas de violão, guitarra e bateria. Solicite seu orçamento." />
+  <meta name="author" content="Menezes Mêne" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://menezes-mene.netlify.app/" />
   <link rel="icon" href="./img/burger-card.webp" />
   <link rel="preload" href="./img/services-background.svg" as="image" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Menezes Mêne" />
+  <meta property="og:title" content="Menezes Mêne | Shows e aulas de música em Santos" />
+  <meta property="og:description" content="Shows, apresentações para eventos e aulas de violão, guitarra e bateria em Santos e região." />
+  <meta property="og:url" content="https://menezes-mene.netlify.app/" />
+  <meta property="og:image" content="https://menezes-mene.netlify.app/img/burger-card.webp" />
+  <meta property="og:image:alt" content="Menezes Mêne, ministério e apresentações musicais" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menezes Mêne | Shows e aulas de música em Santos" />
+  <meta name="twitter:description" content="Shows, apresentações para eventos e aulas de violão, guitarra e bateria em Santos e região." />
+  <meta name="twitter:image" content="https://menezes-mene.netlify.app/img/burger-card.webp" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Menezes Mêne",
+      "url": "https://menezes-mene.netlify.app/",
+      "image": "https://menezes-mene.netlify.app/img/burger-card.webp",
+      "description": "Shows e apresentações musicais para eventos, além de aulas de violão, guitarra e bateria em Santos e região.",
+      "telephone": "+5513981354808",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Santos"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Baixada Santista"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/menezes_mene/",
+        "https://www.facebook.com/MenezesSP",
+        "https://www.youtube.com/@menezesmene5489"
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -31,7 +71,7 @@
   <!--Cabeçalho-->
   <header class="header">
     <div class="logo-img">
-      <img src="img/logo.png" alt="logo-image" class="logox" />
+      <img src="img/logo.png" alt="Logo do Ministério Menezes Mêne" class="logox" />
       <!--Logo-->
       <div class="logo">
 
@@ -48,20 +88,20 @@
           <a class="nav-item" href="/">Início</a>
         </li>
         <li class="pipeline">
-          <h2>|</h2>
+          <span aria-hidden="true">|</span>
         </li>
           
         <li>
           <a class="nav-item" href="#gministerio">Ministério</a>
         </li>
         <li class="pipeline" >
-          <h2>|</h2>
+          <span aria-hidden="true">|</span>
         </li>
         <li>
           <a class="nav-item" href="#descriptions">Serviços</a>
         </li>
         <li class="pipeline">
-          <h2>|</h2>
+          <span aria-hidden="true">|</span>
         </li>
           
         <li>
@@ -82,7 +122,7 @@
   <!-- <section class="section-vid">
   </section> -->
 
-  <div class="qrcode-s"><img src="./img5/qrcode-site.png"  alt="qrcode-site" class="qrcode-site"></div>
+  <div class="qrcode-s"><img src="./img5/qrcode-site.png" alt="QR code para acessar o site Menezes Mêne" class="qrcode-site"></div>
   
   <main class="main">
 
@@ -98,10 +138,10 @@
         <!--banner text-->
         <article class="banner-text">
           <div class="banner-text1">
-            <h6 class="banner-subtitle">
+            <p class="banner-subtitle">
               Ministério
-            </h6>
-            <h6 class="banner-subtitle2">We are the church</h6>
+            </p>
+            <p class="banner-subtitle2">We are the church</p>
 
             <h1 class="banner-title">MENEZES MÊNE</h1>
           </div>
@@ -118,7 +158,7 @@
 
         <!--banner img-->
         <aside class="banner-img">
-          <img src="./img/burger-card.webp" alt="banner-image" class="banner-image" />
+          <img src="./img/burger-card.webp" alt="Menezes Mêne tocando guitarra em seu estúdio" class="banner-image" fetchpriority="high" />
         </aside>
       </div>
 
@@ -128,7 +168,7 @@
     <section class="classevide">
 
       <div id="title-music">
-        <h1>Musica Consagrada</h1>
+        <h2>Música Consagrada</h2>
       </div>
 
       <div class="musicmenezes">
@@ -138,7 +178,7 @@
       </div>
 
       <div class="titulo-videos">
-        <h1>Videos da Banda</h1>
+        <h2>Vídeos da Banda</h2>
       </div>
 
       <div>
@@ -194,23 +234,23 @@
 
 
               <div class="slide s1">
-                <img src="./images/cd1.webp" alt="grupo0">
+                <img src="./images/cd1.webp" alt="Ministério Menezes Mêne em apresentação musical, foto 1" loading="lazy" decoding="async">
               </div>
 
               <div class="slide">
-                <img src="./images/cd2.webp" alt="grupo1">
+                <img src="./images/cd2.webp" alt="Ministério Menezes Mêne em apresentação musical, foto 2" loading="lazy" decoding="async">
               </div>
 
               <div class="slide">
-                <img src="./images/cd0.webp" alt="grupo2">
+                <img src="./images/cd0.webp" alt="Ministério Menezes Mêne em apresentação musical, foto 3" loading="lazy" decoding="async">
               </div>
 
               <div class="slide">
-                <img src="./images/cd4.webp" alt="grupo3">
+                <img src="./images/cd4.webp" alt="Ministério Menezes Mêne em apresentação musical, foto 4" loading="lazy" decoding="async">
               </div>
 
               <div class="slide">
-                <img src="./images/cd5.webp" alt="grupo4">
+                <img src="./images/cd5.webp" alt="Ministério Menezes Mêne em apresentação musical, foto 5" loading="lazy" decoding="async">
               </div>
             </div>
 
@@ -235,7 +275,7 @@
         <div class="projetos-caixa" id="cardxx">
 
             <div class="projetos-card" >
-              <img src="./img2/cd0.webp" alt="Manutenção da guitarra" class="projetos-imagem">
+              <img src="./img2/cd0.webp" alt="Manutenção da guitarra" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Manutenção da Guitarra.</h3>
                   <p class="paragrafo-projetos">Levando a Guitarra no Luthier - Guitarra pronta.</p>
@@ -243,7 +283,7 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd1.webp" alt="Congresso de jovens" class="projetos-imagem">
+              <img src="./img2/cd1.webp" alt="Congresso de jovens" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Congresso</h3>
                   <p class="paragrafo-projetos">Congresso de Jovens UJADEMC.</p>
@@ -251,7 +291,7 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd2.webp" alt="Congresso de jovens" class="projetos-imagem">
+              <img src="./img2/cd2.webp" alt="Congresso de jovens" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Congresso</h3>
                   <p class="paragrafo-projetos">Mais sobre Congresso de Jovens UJADEMC.</p>
@@ -259,23 +299,23 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd3.webp" alt="Estúdio David Musical" class="projetos-imagem">
+              <img src="./img2/cd3.webp" alt="Estúdio David Musical" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
-                  <h3 class="info-projetos">Estudio</h3>
-                  <p class="paragrafo-projetos">Estudio David Musical.</p>
+                  <h3 class="info-projetos">Estúdio</h3>
+                  <p class="paragrafo-projetos">Estúdio David Musical.</p>
               </div> 
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd4.webp" alt="Estúdio Gato da Pedreira" class="projetos-imagem">
+              <img src="./img2/cd4.webp" alt="Estúdio Gato da Pedreira" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
-                  <h3 class="info-projetos">Meu Estudio</h3>
-                  <p class="paragrafo-projetos">Estudio Gato da Pedreira.</p>
+                  <h3 class="info-projetos">Meu estúdio</h3>
+                  <p class="paragrafo-projetos">Estúdio Gato da Pedreira.</p>
               </div>
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd5.webp" alt="Estudos de música e guitarra" class="projetos-imagem">
+              <img src="./img2/cd5.webp" alt="Estudos de música e guitarra" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Estudos</h3>
                   <p class="paragrafo-projetos">Estudando Música e Guitarra.</p>
@@ -283,15 +323,15 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd6.webp" alt="Estudos de música e guitarra" class="projetos-imagem">
+              <img src="./img2/cd6.webp" alt="Estudos de música e guitarra" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
-                  <h3 class="info-projetos">Estudos Afiados</h3>
+                  <h3 class="info-projetos">Estudos avançados</h3>
                   <p class="paragrafo-projetos">Estudando com muita alegria, Musica e Guitarra.</p>
               </div>
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd7.webp" alt="Apresentação com Pablo" class="projetos-imagem">
+              <img src="./img2/cd7.webp" alt="Apresentação com Pablo" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Play</h3>
                   <p class="paragrafo-projetos">Play com Pablo - Ad. Vila esperança.</p>
@@ -299,7 +339,7 @@
             </div>
 
             <div class="projetos-card">
-            <img src="./img2/cd8.webp" alt="Estudos e aperfeiçoamento musical" class="projetos-imagem">
+            <img src="./img2/cd8.webp" alt="Estudos e aperfeiçoamento musical" class="projetos-imagem" loading="lazy" decoding="async">
             <div class="caixa-textos-projeto">
                 <h3 class="info-projetos">Estudando</h3>
                 <p class="paragrafo-projetos">Aperfeiçoamentos Musicais, cada dia melhor.</p>
@@ -307,7 +347,7 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd9.webp" alt="Professor Luiz Oliveira" class="projetos-imagem">
+              <img src="./img2/cd9.webp" alt="Professor Luiz Oliveira" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Professor</h3>
                   <p class="paragrafo-projetos">Professor Luiz Oliveira - Grande Mestre da Música.</p>
@@ -315,7 +355,7 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd10.webp" alt="Estudos musicais" class="projetos-imagem">
+              <img src="./img2/cd10.webp" alt="Estudos musicais" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
                   <h3 class="info-projetos">Estudando</h3>
                   <p class="paragrafo-projetos">Estudando Muito.</p>
@@ -323,10 +363,10 @@
             </div>
 
             <div class="projetos-card">
-              <img src="./img2/cd11.webp" alt="Workshop com Marcinho Eiras" class="projetos-imagem">
+              <img src="./img2/cd11.webp" alt="Workshop com Marcinho Eiras" class="projetos-imagem" loading="lazy" decoding="async">
               <div class="caixa-textos-projeto">
-                  <h3 class="info-projetos">work shop</h3>
-                  <p class="paragrafo-projetos">Marcinho Eiras - Work Shop.</p>
+                  <h3 class="info-projetos">Workshop</h3>
+                  <p class="paragrafo-projetos">Workshop com Marcinho Eiras.</p>
               </div>
             </div>
 
@@ -385,7 +425,7 @@
 
       <div class="description-content">
         <article class="description-card">
-          <h2 class="description-title">Aulas de Guitarra e Violão</h2>
+          <h3 class="description-title">Aulas de guitarra e violão</h3>
           <p class="description">
             Aprenda a tocar guitarra e violão com aulas personalizadas para todos os níveis. Desenvolva suas
             habilidades
@@ -403,7 +443,7 @@
         </article>
 
         <article class="description-card">
-          <h2 class="description-title">Aulas de Bateria</h2>
+          <h3 class="description-title">Aulas de bateria</h3>
           <p class="description">
             Aprenda bateria do zero ao avançado com aulas práticas e divertidas! Nossos cursos cobrem teoria,
             rudimentos, grooves e
@@ -420,7 +460,7 @@
         </article>
 
         <article class="description-card">
-          <h2 class="description-title">Aulas de Inglês (Projeto Futuro)</h2>
+          <h3 class="description-title">Aulas de Inglês (Projeto Futuro)</h3>
           <p class="description">
             Aprenda inglês de forma dinâmica e interativa com o Projeto Futuro! Nossas aulas são projetadas para
             desenvolver suas
@@ -436,7 +476,7 @@
         </article>
 
         <article class="description-card">
-          <h2 class="description-title">Apresentações Solo ou em Grupo</h2>
+          <h3 class="description-title">Apresentações Solo ou em Grupo</h3>
           <p class="description">
             “Desfrute de uma experiência musical íntima e única com nossas apresentações solo. Cada performance é uma
             jornada
@@ -461,7 +501,7 @@
 
       <div class="questions-text">
           <article class="questions-title">
-            <h3 class="question-description">Perguntas frequentes</h3>
+            <h2 class="question-description">Perguntas frequentes</h2>
             <p class="question-description">Tirem suas dúvidas?</p>
           </article>
 
@@ -482,7 +522,7 @@
                 🚀 <strong>4º Pacote Empresarial:</strong> Produção completa, incluindo sonorização profissional, 
                 iluminação personalizada e setlist exclusivo para grandes eventos. 🔥<br /><br />
                 
-                🏆 Todos os pacotes garantem **alta qualidade sonora**, **presença de palco marcante** e **interação com o público**. 
+                🏆 Todos os pacotes garantem <strong>alta qualidade sonora</strong>, <strong>presença de palco marcante</strong> e <strong>interação com o público</strong>.
                 Transforme seu evento em um espetáculo único! 🎊🎵
             </p>
           </details>
@@ -522,7 +562,7 @@
                     ou insere a chave Pix fornecida 🔑 e confirma o pagamento no aplicativo do banco. 🏦
                     <br />
                     <b>Vantagens:</b> Pagamento instantâneo 🚀, sem taxas adicionais para o cliente 💲 e disponível 24/7 🕒.
-                    <br /><br /><a rel="canonical" href="#pix-pagar" class="plan-btn2">💳 Pagar no Pix</a><br /><br />
+                    <br /><br /><a href="#pix-pagar" class="plan-btn2">💳 Pagar no Pix</a><br /><br />
                 </li>
                 
                 <li>
@@ -559,7 +599,7 @@
   <div class="pagamento-pixx">
     <div class="pix-container">
       <h2 class="pix-title" id="pix-pagar">PAGAMENTO PIX</h2>
-      <img src="./img5/qrcode-pix.png" alt="Pix" class="pix-img">
+      <img src="./img5/qrcode-pix.png" alt="QR code para pagamento via Pix para José Anchieta Menezes" class="pix-img" loading="lazy" decoding="async">
     </div>
     <div class="pix-info">
       <p class="info-pix">Chave PIX: (13) 98135-4808
@@ -585,15 +625,18 @@
       <div class="contact-content">
         <form action="https://api.staticforms.xyz/submit" method="post" class="contact-form">
           <input type="hidden" name="accessKey" value="ac6fd009-8734-4b74-86eb-a86ccd84bc8e" />
-          <input type="text" name="name" placeholder="Digite seu nome" required />
-          <input type="email" name="email" placeholder="Digite seu E-mail" required />
-          <textarea name="message" placeholder="Digite sua mensagem" required></textarea>
+          <label class="visually-hidden" for="contact-name">Nome</label>
+          <input id="contact-name" type="text" name="name" placeholder="Digite seu nome" autocomplete="name" required />
+          <label class="visually-hidden" for="contact-email">E-mail</label>
+          <input id="contact-email" type="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required />
+          <label class="visually-hidden" for="contact-message">Mensagem</label>
+          <textarea id="contact-message" name="message" placeholder="Digite sua mensagem" required></textarea>
           <input type="hidden" name="redirectTo" value="https://wa.me/13981354808?text=Quero%20contratar!" />
           <button type="submit" class="contact-btn">Enviar</button>
         </form>
 
         <aside class="contact-img">
-          <img src="./img/contato.webp" alt="contact-image" class="contact-image" />
+          <img src="./img/contato.webp" alt="Ilustração de atendente com headset, representando a área de contato" class="contact-image" loading="lazy" decoding="async" />
         </aside>
       </div>
     </section>
@@ -608,7 +651,7 @@
     </div>
 
     <div class="whatsapp-content">
-        <a href="https://wa.me/13981354808?text=Quero%20contratar!"><img src="./img5/whatsapp.png" alt="whatsapp-image" class="whatsapp-contato-image" width="60"></a>
+        <a href="https://wa.me/13981354808?text=Quero%20contratar!"><img src="./img5/whatsapp.png" alt="Falar com Menezes Mêne pelo WhatsApp" class="whatsapp-contato-image" width="60"></a>
     </div>
   <!-- FIM - icones fixos na tela -->
 
@@ -616,8 +659,8 @@
     <div class="footer-contacto-pai">
       <div class="footer-contacto">
         <h2>Entrar em Contato:</h2>
-        <h4>Tel: +55(13)98135-4808</h4>
-        <img src="./img3/IMG-20250122-WA0001.jpg" alt="footer-image" class="footer-image" width="110">
+        <h3>Tel: +55 (13) 98135-4808</h3>
+        <img src="./img3/IMG-20250122-WA0001.jpg" alt="Foto do Ministério Menezes Mêne" class="footer-image" width="110" loading="lazy" decoding="async">
       </div>
     </div>
     <!-- <span class="images-medias">
@@ -635,17 +678,16 @@
 
 
     <ul class="footer-icons">
-      <li class="icons-list"><a rel="canonical"
-          href="https://www.instagram.com/menezes_mene/profilecard/?igsh=MTZ3dXF6NnBwNm85dw==" class="icons-links"
+      <li class="icons-list"><a
+          href="https://www.instagram.com/menezes_mene/" class="icons-links"
           aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a rel="canonical" href="https://www.facebook.com/MenezesSP?mibextid=ZbWKwL" class="icons-links"
+        <a href="https://www.facebook.com/MenezesSP" class="icons-links"
           aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a rel="canonical" href="https://wa.me/13981354808?text=Quero%20contratar!" class="icons-links"
+        <a href="https://wa.me/13981354808?text=Quero%20contratar!" class="icons-links"
           aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a rel="canonical" href="https://youtube.com/@menezesmene5489?si=I5zUZhuSavOFciCp" class="icons-links"
+        <a href="https://www.youtube.com/@menezesmene5489" class="icons-links"
           aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a rel="canonical" href="https://br.linkedin.com" class="icons-links" aria-label="LinkedIn"><i
-            class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/" class="icons-links" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         <!--<a rel="canonical" href="https://discord.gg/" class="icons-links" arial-label="discord"><i
             class="fa-brands fa-discord"></i></a>
 

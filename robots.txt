@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://menezes-mene.netlify.app/sitemap.xml
